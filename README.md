@@ -1,2 +1,2 @@
-# food-grocery-shopping
-This repository contains code for a food grocery shopping website.
+# e-commerce-gaming
+A website that sells games.
