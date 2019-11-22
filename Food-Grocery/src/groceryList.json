@@ -1,183 +1,129 @@
 [
     {
         "id": 1,
-        "title": "Forza Horizon 4",
-        "description": "Britain Like You’ve Never Seen it. Discover lakes, valleys, castles, and breathtaking scenery all in spectacular native 4K and HDR on Xbox One",
-        "console": "xbox one",
-        "price": "$49.99",
-        "genre": "Racing",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/71aGz2zOywL._AC_SL1200_.jpg",
-        "youtubeId" : "VmQNo8xtcAg"
+        "title": "Whole Milk",
+        "description": "Whole milk straight from the cow.",
+        "category": "dairy",           
+        "url": "https://images-na.ssl-images-amazon.com/images/I/81uQm2SqxhL._SY606_.jpg"
     },
       {
         "id": 2,
-        "title": "Halo 5: Guardians",
-        "description": "Intense story on a galactic scale: Play as the Master Chief and Spartan Locke across three new worlds.",
-        "console": "xbox one",
-        "price": "$49.99",
-        "genre": "Shooter",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/71jUlLTTl3L._AC_SL1380_.jpg",
-        "youtubeId" : "SHsWS9nxwPA"
+        "title": "2% Milk",
+        "description": "Pasturized milk from the cow, to us, to you.",
+        "category": "dairy",
+        "url": "https://www.kroger.com/product/images/xlarge/front/0001111041700"
       },
       {
         "id": 3,
-        "title": "Jurassic World Evolution",
-        "description": "Take charge of operations on the legendary islands of the Muertes archipelago and bring the wonder, majesty and danger of dinosaurs to life. Build for Science, Entertainment or Security interests in an uncertain world where life always finds a way. ",
-        "console": "xbox one",
-        "price": "$59.99",
-        "genre": "Strategy",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91rifocL6sL._AC_SL1500_.jpg",
-        "youtubeId" : "j0-WtQEHBFk"
+        "title": "Red Apple",
+        "description": "Crisp red apple pick at peak ripness.",
+        "category": "xbox one",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91rifocL6sL._AC_SL1500_.jpg"
       },   
       {
         "id": 4,
         "title": "Fifa 18",
         "description": "Celebrate The World's Game in EA SPORTS FIFA 18 with the addition of football’s biggest tournament: the 2018 FIFA World Cup Russia™. Available to FIFA 18 owners through a free* content update on May 29, the FIFA World Cup™ lets you experience the greatest tournament on earth through authentic gameplay, teams, stadiums, and more.",
-        "console": "xbox one",
-        "price": "$50.00",
-        "genre": "Sports",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/71Z9pzbL9gL._AC_SL1000_.jpg",
-        "youtubeId" : "yleir9ghWxo"
+        "category": "xbox one",       
+         "url": "https://images-na.ssl-images-amazon.com/images/I/71Z9pzbL9gL._AC_SL1000_.jpg"
       },
       {
         "id": 5,
         "title": "Injustice™ 2",
         "description": "Power up and build the ultimate version of your favorite DC legends in INJUSTICE 2 – winner of IGN's best fighting game of 2017.",
-        "console": "xbox one",
-        "price": "$59.99",
-        "genre": "Fighting",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51zYtcfzheL.jpg",
-        "youtubeId" : "aUOPG6UjTfI"
+        "category": "xbox one",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51zYtcfzheL.jpg"
       },
       {
         "id": 6,
         "title": "Vampyr",
         "description": "London, 1918. You are newly-turned Vampyr Dr. Jonathan Reid. As a doctor, you must find a cure to save the city’s flu-ravaged citizens. As a Vampyr, you are cursed to feed on those you vowed to heal. ",
-        "console": "xbox one",
-        "price": "$59.99",
-        "genre": "Roleplaying",
-        "url": "https://www.gamestop.com/common/images/lbox/150324b.jpg",
-        "youtubeId" : "TTEQ_YblSyU"
+        "category": "xbox one",
+        "url": "https://www.gamestop.com/common/images/lbox/150324b.jpg"
       },
       {
         "id": 7,
         "title": "State of Decay 2",
         "description": "In the zombie apocalypse, you must create your own moral code. Every decision has lasting consequences that you must face. How you decide to survive may surprise you.",
-        "console": "xbox one",
-        "price": "$29.99",
-        "genre": "Roleplaying",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51beDhWqb2L.jpg",
-        "youtubeId" : "qjLOFZjGClY"
+        "category": "xbox one",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51beDhWqb2L.jpg"
       },
       {
         "id": 8,
         "title": "Need for Speed™ Payback",
         "description": "Need for Speed™, one of the world’s bestselling video game franchises, returns with a vengeance in the new action-driving blockbuster, Need for Speed Payback.",
-        "console": "xbox one",
-        "price": "$39.99",
-        "genre": "Racing",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/517j24s9ZzL.jpg",
-        "youtubeId" : "GHwZj1GcYmg"
+        "category": "xbox one",        
+        "url": "https://images-na.ssl-images-amazon.com/images/I/517j24s9ZzL.jpg"
       },
       {
         "id": 9,
         "title": "Assetto Corsa",
         "description": "This is not just a game. This is real sim racing. In collaboration with the most prestigious car manufacturers, Assetto Corsa ups the simulation stakes with a focus on pure driving realism, with pin-point accuracy across every aspect of the game.",
-        "console": "xbox one",
-        "price": "$29.99",
-        "genre": "Racing",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/812BhVCSj1L._AC_SL1500_.jpg",
-        "youtubeId" : "TFwaGi-MkNo"
+        "category": "xbox one",       
+        "url": "https://images-na.ssl-images-amazon.com/images/I/812BhVCSj1L._AC_SL1500_.jpg"
       },
       {
         "id": 10,
         "title": "Past Cure",
         "description": "Past Cure is a dark psychological thriller that blurs the lines between dreams and reality. An intense, cinematic, story-driven experience that challenges the player to use mind-bending mental abilities to survive.",
-        "console": "xbox one",
-        "price": "$29.99",
-        "genre": "Shooter",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/41Tp04eMH1L.jpg",
-        "youtubeId" : "D3AY1etendI"
+        "category": "xbox one",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/41Tp04eMH1L.jpg"
       },
       {
         "id": 11,
         "title": "God of War",
         "description": "God of War is an action-adventure video game developed by Santa Monica Studio and published by Sony Interactive Entertainment.",
-        "console": "PS4",
-        "price": "$49.99",
-        "genre": "Shooter",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51po2bu7VnL.jpg",
-        "youtubeId" : "K0u_kAWLJOA"
+        "category": "PS4",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51po2bu7VnL.jpg"
       },
       {
         "id": 12,
         "title": "BioShock: The Collection",
         "description": "BioShock: The Collection contains all single-player content from BioShock, BioShock 2, and BioShock Infinite, all single-player add-on content, the “Columbia’s Finest” pack, and Director’s Commentary: Imagining BioShock, featuring Ken Levine and Shawn Robertson.",
-        "console": "xbox one",
-        "price": "$59.99",
-        "genre": "Shooter",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51Tmebbt9ZL.jpg",
-        "youtubeId" : "QtwY33n5WIo"
+        "category": "xbox one",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51Tmebbt9ZL.jpg"
       },
       {
         "id": 13,
         "title": "Tennis World Tour",
         "description": "Play as one of the 30 best tennis players in the world: Roger Federer, Angelique Kerber, Stan Wawrinka and many of the sport's legends.",
-        "console": "PS4",
-        "price": "$59.99",
-        "genre": "Sports",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51J5aX2VVML.jpg",
-        "youtubeId" : "9egQyy1nO2E"
+        "category": "PS4",        
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51J5aX2VVML.jpg"
       },
       {
         "id": 14,
         "title": "The Witcher 3: Wild Hunt – Complete Edition",
         "description": "The Complete Edition includes The Witcher 3: Wild Hunt, all 16 DLCs, and 2 Expansion Packs: Hearts of Stone & Blood and Wine.",
-        "console": "PS4",
-        "price": "$49.99",
-        "genre": "Roleplaying",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51FdXnfNj6L.jpg",
-        "youtubeId" : "PNqmGT9mkOg"
+        "category": "PS4",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51FdXnfNj6L.jpg"
       },
       {
         "id": 15,
         "title": "Detroit: Become Human",
         "description": "Create your own story: Observe, think, decide, feel, and follow your intuition to tell the unique story for eac h of three playable characters",
-        "console": "PS4",
-        "price": "$49.99",
-        "genre": "Shooter",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/81rLtmfYG2L._AC_SL1500_.jpg",
-        "youtubeId" : "sAmKdZdfV1c"
+        "category": "PS4",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/81rLtmfYG2L._AC_SL1500_.jpg"
       },
       {
         "id": 16,
         "title": "Red Dead Redemption 2",
         "description": "America, 1899. The end of the wild west era has begun as lawmen hunt down the last remaining outlaw gangs. ",
-        "console": "PS4",
-        "price": "$59.99",
-        "genre": "Roleplaying",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91bfWN5QlDL._AC_SL1500_.jpg",
-        "youtubeId" : "6VVhPqGMDAg"
+        "category": "PS4",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91bfWN5QlDL._AC_SL1500_.jpg"
       },
       {
         "id": 17,
         "title": "Need for Speed™ Rivals",
         "description": "Play as either a cop or racer, where each side of the law has its own set of high stakes challenges, rewards and consequences. Risk everything in the ultimate high stakes rivalry. ",
-        "console": "PS4",
-        "price": "$19.99",
-        "genre": "Racing",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/71OxEcVQYUL._AC_SL1500_.jpg",
-        "youtubeId" : "2FhCCBXhNr4"
+        "category": "PS4",        
+        "url": "https://images-na.ssl-images-amazon.com/images/I/71OxEcVQYUL._AC_SL1500_.jpg"
       },
       {
         "id": 18,
         "title": "Project CARS 2",
         "description": "Guided, tested, and approved by a passionate community of racing fans and real-life drivers, Project CARS represents the next-generation of racing simulation.",
-        "console": "PS4",
-        "price": "$19.99",
-        "genre": "Racing",
-        "url": "https://www.gamestop.com/common/images/lbox/142546b.jpg",
-        "youtubeId" : "opjJ4jHaJn4"
+        "category": "PS4",        
+        "url": "https://www.gamestop.com/common/images/lbox/142546b.jpg"
 
         
       },
@@ -185,306 +131,210 @@
         "id": 19,
         "title": "Far Cry 4",
         "description": "REVOLUTIONARY OPEN WORLD CO-OP: Far Cry 4 allows for a second player to drop in and out at any point, re-imagining the cooperative experience in the true spirit of Far Cry for the next generation.",
-        "console": "PS4",
-        "price": "$49.99",
-        "genre": "Shooter",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91TD5UrfB3L._AC_SL1500_.jpg",
-        "youtubeId" : "7_M6v1d1lOQ"
+        "category": "PS4",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91TD5UrfB3L._AC_SL1500_.jpg"
 
 
       },{
         "id": 20,
         "title": "Far Cry 5",
         "description": "Fan the flames of resistance and fight to free Hope County from the grip of a deadly cult in the newest installment of the Far Cry series.",
-        "console": "PS4",
-        "price": "$49.99",
-        "genre": "Shooter",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91keHwoCTAL._AC_SL1500_.jpg",
-        "youtubeId" : "RARURPrkBqc"
+        "category": "PS4",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91keHwoCTAL._AC_SL1500_.jpg"
       },
       {
         "id": 21,
         "title": "Cars 3: Driven to Win",
         "description": "Train and advance your abilities of two-wheel driving, barrel rolls and more in 6 thrilling game modes.",
-        "console": "nintendo",
-        "price": "$49.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51NrOqojX8L.jpg",
-        "youtubeId" : "Pkg0XiaRjuY"
+        "category": "nintendo",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51NrOqojX8L.jpg"
       },
       {
         "id": 22,
         "title": "The Legend of Zelda: Breath of the Wild",
         "description": "Step into a world of discovery, exploration and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking new game in the acclaimed series",
-        "console": "nintendo",
-        "price": "$59.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/71B5c%2BEmz6L._AC_SL1037_.jpg",
-        "youtubeId" : "zw47_q9wbBE"     
+        "category": "nintendo",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/71B5c%2BEmz6L._AC_SL1037_.jpg"     
       },
       {
         "id": 23,
         "title": "Mario & Sonic at the Rio 2016 Olympic Games",
         "description": "Experience the thrill of the Rio 2016 Olympic Games by competing with friends as gaming icons like Mario™ and Sonic.",
-        "console": "nintendo",
-        "price": "$59.99",
-        "genre": "Sports",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/912eNbaKwyL._AC_SL1500_.jpg",
-        "youtubeId" : "APV7ri3scLI"  
+        "category": "nintendo",        
+        "url": "https://images-na.ssl-images-amazon.com/images/I/912eNbaKwyL._AC_SL1500_.jpg"  
       },
       {
         "id": 24,
         "title": "Star Fox Zero",
         "description": "An evil empire has risen and the Lylat system is in danger.",
-        "console": "nintendo",
-        "price": "$59.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91W%2BPkALvbL._AC_SL1500_.jpg",
-        "youtubeId" : "s6PEecNY0Sc"  
+        "category": "nintendo",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91W%2BPkALvbL._AC_SL1500_.jpg"  
 
       },
       {
         "id": 25,
         "title": "LEGO Star Wars: The Force Awakens",
         "description": "The No. 1 LEGO® videogame franchise triumphantly returns with a fun-filled, humorous journey based on the blockbuster Star Wars film.",
-        "console": "PS4",
-        "price": "$19.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91RCJtQuDlL._AC_SL1500_.jpg",
-        "youtubeId" : "i0IJqIzO_YM" 
+        "category": "PS4",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91RCJtQuDlL._AC_SL1500_.jpg" 
 
       },
       {
         "id": 26,
         "title": "Mario Party 10",
-        "description": "Bowser crashes the latest Mario Party, the first installment of the series on the Wii U console.",
-        "console": "nintendo",
-        "price": "$29.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91nUR2HpB8L._AC_SL1500_.jpg",
-        "youtubeId" : "L69Z39bgdU4" 
+        "description": "Bowser crashes the latest Mario Party, the first installment of the series on the Wii U category.",
+        "category": "nintendo",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91nUR2HpB8L._AC_SL1500_.jpg" 
 
       },
       {
         "id": 27,
         "title": "Mario Kart 8",
         "description": "Race upside-down and along walls on anti-gravity tracks in the most action-fueled Mario Kart™ game yet",
-        "console": "nintendo",
-        "price": "$59.99",
-        "genre": "Racing",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91LQiO6JrbL._AC_SL1500_.jpg",
-        "youtubeId" : "mU7tXqYplA8" 
+        "category": "nintendo",       
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91LQiO6JrbL._AC_SL1500_.jpg" 
       },
       {
         "id": 28,
         "title": "New Super Mario Bros. U",
         "description": "New Super Mario Bros. U is a new, side-scrolling adventure featuring Mario, Luigi, Toad … and your Mii character.",
-        "console": "nintendo",
-        "price": "$59.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91A8k%2BZkoEL._AC_SL1500_.jpg",
-        "youtubeId" : "IQHa4qindfE" 
+        "category": "nintendo",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91A8k%2BZkoEL._AC_SL1500_.jpg" 
       },
       {
         "id": 29,
         "title": "Super Smash Bros.",
         "description": "All of your favorite Nintendo characters are back, along with plenty of new faces, in Super Smash Bros. for Wii U, the next entry in the beloved Super Smash Bros. series.",
-        "console": "nintendo",
-        "price": "$59.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/61f4tYoL5rL.jpg",
-        "youtubeId" : "nb1m_wyB4bM" 
+        "category": "nintendo",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/61f4tYoL5rL.jpg" 
       },
       {
         "id": 30,
         "title": "Super Mario Odyssey",
         "description": "Jump back into the fun of a favorite Nintendo series with Super Mario Odyssey for Nintendo Switch.",
-        "console": "hand held", 
-        "price": "$48.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51cE%2B9FaiWL.jpg",
-        "youtubeId" : "wGQHQc_3ycE" 
+        "category": "hand held",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51cE%2B9FaiWL.jpg" 
       },
       {
         "id": 31,
         "title": "Octopath Traveler",
         "description": "Play eight separate games in one immersive title with Octopath Traveler for Nintendo Switch.",
-        "console": "hand held", 
-        "price": "$59.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91mZyz7oKYL._AC_SL1500_.jpg",
-        "youtubeId" : "Z0nm7gXX0Vs" 
+        "category": "hand held",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91mZyz7oKYL._AC_SL1500_.jpg" 
       },{
         "id": 32,
         "title": "Dragon Ball Xenoverse 2",
         "description": "Dragon Ball Xenoverse 2 builds upon the highly popular Dragon Ball Xenoverse with enhanced graphics that will further immerse players into a large and detailed Dragon Ball world",
-        "console": "hand held", 
-        "price": "$48.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51FDkrUcgbL.jpg",
-        "youtubeId" : "JnUbg-9v_bE" 
+        "category": "hand held",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51FDkrUcgbL.jpg" 
       },{
         "id": 33,
         "title": "Mario Kart 8 Deluxe",
         "description": "Battle new enemies on a host of fun tracks with Mario Kart 8 Deluxe for the Nintendo Switch.",
-        "console": "hand held", 
-        "price": "$58.99",
-        "genre": "Racing",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51%2BwYjqjV7L.jpg",
-        "youtubeId" : "tKlRN2YpxRE&t=9s" 
+        "category": "hand held",         
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51%2BwYjqjV7L.jpg"t=9s" 
       },{
         "id": 34,
         "title": "Mario Tennis Aces",
         "description": "Help Mario master his serve with Mario Tennis Aces for Nintendo Switch",
-        "console": "hand held", 
-        "price": "$59.99",
-        "genre": "Sports",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91TvX36nF-L._AC_SL1500_.jpg",
-        "youtubeId" : "YdpZBn-uA24" 
+        "category": "hand held",         
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91TvX36nF-L._AC_SL1500_.jpg" 
       },{
         "id": 35,
         "title": "Donkey Kong Country: Tropical Freeze",
         "description": "Take on new challenges with the old Kong crew when you play Donkey Kong Country Tropical Freeze for Nintendo Switch",
-        "console": "hand held", 
-        "price": "$48.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/61h6qGbzhmL.jpg",
-        "youtubeId" : "1psp2t0Zi9o" 
+        "category": "hand held",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/61h6qGbzhmL.jpg" 
       },{
         "id": 36,
         "title": "Crash Bandicoot N. Sane Trilogy",
         "description": "Your favorite marsupial, Crash Bandicoot™, is back! He’s enhanced, entranced & ready-to-dance with the N. Sane Trilogy game collection",
-        "console": "hand held",
-        "price": "$39.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91iMF9o1KQL._AC_SL1500_.jpg",
-        "youtubeId" : "Y53JPo_2zLI" 
+        "category": "hand held",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91iMF9o1KQL._AC_SL1500_.jpg" 
       },{
         "id": 37,
         "title": "The Legend of Zelda: Breath of the Wild",
         "description": "Travel back to Hyrule with Link in Zelda: Breath of the Wild for the Nintendo Switch",
-        "console": "hand held", 
-        "price": "$54.94",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51Ox7m6-OIL.jpg",
-        "youtubeId" : "zw47_q9wbBE&t=35s" 
+        "category": "hand held",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51Ox7m6-OIL.jpg"t=35s" 
       },{
         "id": 38,
         "title": "EA Sports FIFA 18",
         "description": "Shoot to score with EA Sports FIFA 18 for Nintendo Switch",
-        "console": "hand held", 
-        "price": "$28.99",
-        "genre": "Sports",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/71ty4Qg8WSL._AC_SL1000_.jpg",
-        "youtubeId" : "InDR8tur2z8" 
+        "category": "hand held",         
+        "url": "https://images-na.ssl-images-amazon.com/images/I/71ty4Qg8WSL._AC_SL1000_.jpg" 
       },{
         "id": 39,
         "title": "NBA 2K18 ",
-        "description": "The highest rated* annual sports title of this console generation returns with NBA 2K18, featuring unparalleled authenticity and improvements on the court.",
-        "console": "hand held",
-        "price": "$48.99",
-        "genre": "Sports",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/913D9r16U2L._AC_SL1500_.jpg",
-        "youtubeId" : "U99RvuoXvZ8" 
+        "description": "The highest rated* annual sports title of this category generation returns with NBA 2K18, featuring unparalleled authenticity and improvements on the court.",
+        "category": "hand held",        
+        "url": "https://images-na.ssl-images-amazon.com/images/I/913D9r16U2L._AC_SL1500_.jpg" 
       },{
         "id": 40,
         "title": "Wolfenstein® II: The New Colossus™",
         "description": "An exhilarating adventure brought to life by the industry-leading id Tech® 6, Wolfenstein® II sends players to Nazi-controlled America on a mission to recruit the boldest resistance leaders left.",
-        "console": "hand held",
-        "price": "$59.99",
-        "genre": "Shooter",
-        "url": "https://www.gamestop.com/common/images/lbox/150227b.jpg",
-        "youtubeId" : "aq72sNQrsHE" 
+        "category": "hand held",
+        "url": "https://www.gamestop.com/common/images/lbox/150227b.jpg" 
       },{
         "id": 41,
         "title": "The Sims 4",
         "description": "Now with Pools and Ghosts: Pools and ghosts have arrived and are now included in The Sims 4 with the most recent updates. We've designed the game to be a live service so that we can continually evolve The Sims 4 experience with exciting new features and content.",
-        "console": "computer", 
-        "price": "$49.99",
-        "genre": "Simulation",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/71F4v32j5jL._AC_SL1000_.jpg",
-        "youtubeId" : "Ny--Xm1skgU" 
+        "category": "computer",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/71F4v32j5jL._AC_SL1000_.jpg" 
       },{
         "id": 42,
         "title": "Evolve",
         "description": "Evolve is a true next-generation multiplayer shooter game featuring addictive adrenaline-pumping 4v1 action",
-        "console": "computer", 
-        "price": "$29.99",
-        "genre": "Shooter",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/91wcXq2vy7L._AC_SL1500_.jpg",
-        "youtubeId" : "ipSVaz6l0j0" 
+        "category": "computer", 
+        "url": "https://images-na.ssl-images-amazon.com/images/I/91wcXq2vy7L._AC_SL1500_.jpg" 
       },{
         "id": 43,
         "title": "Call of Duty: Black Ops 4",
         "description": "Featuring gritty, grounded Multiplayer combat, the biggest Zombies offering ever with three full undead adventures at launch, and Blackout, where the universe of Black Ops comes to life in a massive battle royale experience.",
-        "console": "computer", 
-        "price": "$59.99",
-        "genre": "Shooter",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/81z5Q6HMjjL._AC_SL1500_.jpg",
-        "youtubeId" : "ooyjaVdt-jA" 
+        "category": "computer", 
+        "url": "https://images-na.ssl-images-amazon.com/images/I/81z5Q6HMjjL._AC_SL1500_.jpg" 
       },{
         "id": 44,
         "title": "Age of Empires: Definitive Edition",
         "description": "Now with Pools and Ghosts: Pools and ghosts have arrived and are now included in The Sims 4 with the most recent updates. We've designed the game to be a live service so that we can continually evolve The Sims 4 experience with exciting new features and content.",
-        "console": "computer", 
-        "price": "$19.99",
-        "genre": "Simulation",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/71fyrv1wy4L._AC_SL1200_.jpg",
-        "youtubeId" : "Q3rDhoWcVgQ" 
+        "category": "computer",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/71fyrv1wy4L._AC_SL1200_.jpg" 
       },{
         "id": 45,
         "title": "Call of Duty: WWII",
         "description": "Now with Pools and Ghosts: Pools and ghosts have arrived and are now included in The Sims 4 with the most recent updates. We've designed the game to be a live service so that we can continually evolve The Sims 4 experience with exciting new features and content.",
-        "console": "computer", 
-        "price": "$59.99",
-        "genre": "Shooter",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/A10VM2eEiML._AC_SL1500_.jpg",
-        "youtubeId" : "D4Q_XYVescc" 
+        "category": "computer", 
+        "url": "https://images-na.ssl-images-amazon.com/images/I/A10VM2eEiML._AC_SL1500_.jpg" 
       },{
         "id": 46,
         "title": "Mass Effect: Andromeda",
         "description": "Explore another galaxy in Mass Effect: Andromeda for the PC. Explore hostile territories, fight alien enemies and create a new home for the people of Earth",
-        "console": "computer", 
-        "price": "$13.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/71E6j2BJ5AL._AC_SL1000_.jpg",
-        "youtubeId" : "X6PJEmEHIaY" 
+        "category": "computer",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/71E6j2BJ5AL._AC_SL1000_.jpg" 
       },{
         "id": 47,
         "title": "The Elder Scrolls Online: Morrowind ",
         "description": "Save a legendary kingdom from destruction in The Elder Scrolls Online: Morrowind for the PC.",
-        "console": "computer", 
-        "price": "$19.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51Zk%2BPdsjTL.jpg",
-        "youtubeId" : "s5xst39v8wE" 
+        "category": "computer",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51Zk%2BPdsjTL.jpg" 
       },{
         "id": 48,
         "title": "The Elder Scrolls V: Skyrim Special Edition",
         "description": "Winner of more than 200 Game of the Year Awards, Skyrim Special Edition brings the epic fantasy to life in stunning detail. The Special Edition includes the critically acclaimed game and add-ons with all-new features.",
-        "console": "computer", 
-        "price": "$59.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/81rwetLHTwL._AC_SL1500_.jpg",
-        "youtubeId" : "lTjRZ__-278" 
+        "category": "computer",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/81rwetLHTwL._AC_SL1500_.jpg" 
       },{
         "id": 49,
         "title": "Fallout 76",
         "description": "Bethesda Gaming Studios, the award-winning creators of Skyrim and Fallout 4, welcome you to Fallout 76.",
-        "console": "computer", 
-        "price": "$59.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/81faW9RGHQL._AC_SL1500_.jpg",
-        "youtubeId" : "M9FGaan35s0" 
+        "category": "computer",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/81faW9RGHQL._AC_SL1500_.jpg" 
       },{
         "id": 50,
         "title": "Destiny 2",
         "description": "Now with Pools and Ghosts: Pools and ghosts have arrived and are now included in The Sims 4 with the most recent updates. We've designed the game to be a live service so that we can continually evolve The Sims 4 experience with exciting new features and content.",
-        "console": "computer", 
-        "price": "$49.99",
-        "genre": "Action-adventure",
-        "url": "https://images-na.ssl-images-amazon.com/images/I/51gOUEqN48L.jpg",
-        "youtubeId" : "awh2XU3WrWI" 
+        "category": "computer",
+        "url": "https://images-na.ssl-images-amazon.com/images/I/51gOUEqN48L.jpg" 
       }
 
 

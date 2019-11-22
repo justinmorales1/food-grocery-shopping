@@ -1,15 +1,15 @@
-export const consoles = ["xbox one", "ps4", "nintendo", "computer", "gameboy", "handheld"];
-export const games = [
+export const category = ["produce", "dairy", "meat", "seafood", "canned food", "drinks" ];
+export const groceryItems = [
     {
-        id: "forza-horizon-4-xboxone",
-        title: "Forza Horizon 4",
-        description: "Britain Like You’ve Never Seen it. Discover lakes, valleys, castles, and breathtaking scenery all in spectacular native 4K and HDR on Xbox One",
-        console: "xbox one"
+        id: "whole-milk",
+        title: "Whole Milk",
+        description: "Whole Milk straight from the cow",
+        category: "dairy"
       },
       {
-        id: "far-cry-4-ps4",
-        title: "Far Cry 4",
-        description: "REVOLUTIONARY OPEN WORLD CO-OP: Far Cry 4 allows for a second player to drop in and out at any point, re-imagining the cooperative experience in the true spirit of Far Cry for the next generation.",
+        id: "two-percent-milk",
+        title: "2% Milk",
+        description: "Pasturized Milk",
         console: "ps4"
       },
       {
