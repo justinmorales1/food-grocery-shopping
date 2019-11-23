@@ -1,4 +1,4 @@
 id = already set
 title = name of item
-category = "produce", "dairy", "meat", "seafood", "canned food", "drinks"
+category = "produce", "dairy", "meat", "seafood", "non-perishables", "drinks"
 url = this is a link to a image online. 
