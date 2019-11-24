@@ -57,7 +57,7 @@ const styles = {
   },
 };
 
-class GameCard extends React.Component{
+class FoodCard extends React.Component{
   state = {
     open: false,
    gamesTitlesArray: []
@@ -151,7 +151,7 @@ class GameCard extends React.Component{
   }
 }
 
-GameCard.propTypes = {
+FoodCard.propTypes = {
   classes: PropTypes.object.isRequired, 
 };
 
@@ -168,4 +168,4 @@ const mapStateToProps = (currentPageState) => {
   };
 };
 
-export default compose(withStyles(styles), connect(mapStateToProps,mapDispatchToProps))(GameCard);
+export default compose(withStyles(styles), connect(mapStateToProps,mapDispatchToProps))(FoodCard);
