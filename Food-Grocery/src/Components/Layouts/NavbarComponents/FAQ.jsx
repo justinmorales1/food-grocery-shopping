@@ -51,7 +51,7 @@ class FAQ extends React.Component {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-        Most products ordered from Swagoo which are returned no more than 30 days from the date on the packing slip, can be returned directly to our warehouse, subject to certain guidelines. 
+          Most products ordered from Whole Food Eats cannot be returned due to sanitary issues..
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -83,7 +83,7 @@ class FAQ extends React.Component {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-          If you would like to inquire about the balance on your Swagoo gift card. Please Call Us. Toll Free 1-800-SWAGOO.
+          If you would like to inquire about the balance on your Swagoo gift card. Please Call Us. Toll Free 1-800-EAT-FOOD.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
@@ -93,8 +93,8 @@ class FAQ extends React.Component {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-          Email us at help@swagoo.com or call us at 
-          1-800-SWAGOO
+          Email us at help@wholefoodeats.com or call us at
+          1-800-EAT-FOOD
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>

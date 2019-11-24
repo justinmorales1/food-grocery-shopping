@@ -196,7 +196,7 @@ class Register extends React.Component {
         </Button>
         <Dialog open={this.state.open} onClose={this.handleClose} aria-labelledby="form-dialog-title"
         >
-          <DialogTitle id="form-dialog-title">Register for Swagoo</DialogTitle>
+          <DialogTitle id="form-dialog-title">Register for Whole Food Eats</DialogTitle>
           <DialogContent>
             <DialogContentText>
               Please fill out all the fields of the form to complete the registration
