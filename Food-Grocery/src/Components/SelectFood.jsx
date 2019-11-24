@@ -29,7 +29,7 @@ class SelectedGamesComponent extends React.Component {
             return (
                 <div>
                     <FoodGrid
-                        GameList={groceryList.filter(function(groceryList){
+                        foodLists={groceryList.filter(function(groceryList){
                             if(groceryList.title.includes(wordSearch)){
                                 return groceryList;
                             }
@@ -44,7 +44,7 @@ class SelectedGamesComponent extends React.Component {
             return (
                 <div>
                     <FoodGrid
-                        GameList={groceryList.filter(function(groceryList){
+                        foodLists={groceryList.filter(function(groceryList){
                         if(groceryList.category == "dairy" ){
                                 return groceryList;
                             }
@@ -58,7 +58,7 @@ class SelectedGamesComponent extends React.Component {
                 return (
                     <div>
                         <FoodGrid
-                            GameList={groceryList.filter(function(groceryList){
+                            foodLists={groceryList.filter(function(groceryList){
                         if(groceryList.category == "seafood" ){
                                 return groceryList;
                             }
@@ -71,7 +71,7 @@ class SelectedGamesComponent extends React.Component {
             return (
                 <div>
                     <FoodGrid
-                        GameList={groceryList.filter(function(groceryList){
+                        foodLists={groceryList.filter(function(groceryList){
                             if(groceryList.category == "meat" ){
                                 return groceryList;
                             }
@@ -84,7 +84,7 @@ class SelectedGamesComponent extends React.Component {
             return (
                 <div>
                     <FoodGrid
-                        GameList={groceryList.filter(function(groceryList){
+                        foodLists={groceryList.filter(function(groceryList){
                             if(groceryList.category == "produce" ){
                                 return groceryList;
                             }
@@ -97,7 +97,7 @@ class SelectedGamesComponent extends React.Component {
             return (
                 <div>
                     <FoodGrid
-                        GameList={groceryList.filter(function(groceryList){
+                        foodLists={groceryList.filter(function(groceryList){
                             if(groceryList.category == "non-perishables" ){
                                 return groceryList;
                             }
@@ -111,7 +111,7 @@ class SelectedGamesComponent extends React.Component {
                 return (
                     <div>
                         <FoodGrid
-                            GameList={groceryList.filter(function(groceryList){
+                            foodLists={groceryList.filter(function(groceryList){
                                  if(groceryList.title.includes(wordSearch)){
 
                                     return groceryList;
@@ -126,7 +126,7 @@ class SelectedGamesComponent extends React.Component {
         if(this.props.state.currentPageState === FLOW_STATE.MAINPAGE && this.props.state.mainButtonState != null) {
             return (
                 <div>
-                    <FoodGrid GameList={groceryList}/>
+                    <FoodGrid foodLists={groceryList}/>
 
                 </div>
             )

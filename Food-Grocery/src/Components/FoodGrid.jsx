@@ -15,7 +15,7 @@ class FoodGrid extends React.Component{
     styles = this.props.styles;
     render() {
         const classes = this.props
-        const foodCards = classes.GameList.map((food) =>
+        const foodCards = classes.foodLists.map((food) =>
            <FoodCard price={food.price} imgURL={food.url} Title={food.title} Description={food.description} youtubeId ={food.youtubeId}/>
         );
         return(
