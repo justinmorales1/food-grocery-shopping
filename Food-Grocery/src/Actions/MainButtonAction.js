@@ -1,7 +1,7 @@
 export function allFoodsClick(click) {
 
     return {
-        type: 'ALL_GAMES_BUTTON_SELECTED',
+        type: 'ALL_FOODS_BUTTON_SELECTED',
         click
 
     }
@@ -10,7 +10,7 @@ export function allFoodsClick(click) {
 export function produceClick(click) {
     
     return {
-        type: 'XBOX_BUTTON_SELECTED',
+        type: 'PRODUCE_BUTTON_SELECTED',
         click
 
     }
@@ -19,7 +19,7 @@ export function produceClick(click) {
 export function dairyClick(click) {
 
     return {
-        type: 'PLAYSTATION_BUTTON_SELECTED',
+        type: 'DAIRY_BUTTON_SELECTED',
         click
 
     }
@@ -28,7 +28,7 @@ export function dairyClick(click) {
 export function seaFoodClick(click) {
 
     return {
-        type: 'COMPUTER_BUTTON_SELECTED',
+        type: 'SEAFOOD_BUTTON_SELECTED',
         click
 
     }
@@ -37,7 +37,7 @@ export function seaFoodClick(click) {
 export function nonperishableClick(click) {
 
     return {
-        type: 'HANDHELD_BUTTON_SELECTED',
+        type: 'NONPERISHABLE_BUTTON_SELECTED',
         click
 
     }
@@ -46,7 +46,7 @@ export function nonperishableClick(click) {
 export function meatClick(click) {
 
     return {
-        type: 'NINTENDO_BUTTON_SELECTED',
+        type: 'MEAT_BUTTON_SELECTED',
         click
 
     }

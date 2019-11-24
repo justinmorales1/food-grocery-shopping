@@ -6,22 +6,22 @@ function CurrentButtonReducer(state = {}, action) {
     console.log(state)
 
     switch(action.type) {
-        case 'ALL_GAMES_BUTTON_SELECTED':
+        case 'ALL_FOODS_BUTTON_SELECTED':
             newState = action.click;
             return newState;
-        case 'XBOX_BUTTON_SELECTED':
+        case 'PRODUCE_BUTTON_SELECTED':
             newState = action.click;
             return newState;
-        case 'PLAYSTATION_BUTTON_SELECTED':
+        case 'DAIRY_BUTTON_SELECTED':
             newState = action.click;
             return newState;
-        case 'COMPUTER_BUTTON_SELECTED':
+        case 'SEAFOOD_BUTTON_SELECTED':
             newState = action.click;
             return newState;
-        case 'HANDHELD_BUTTON_SELECTED':
+        case 'NONPERISHABLE_BUTTON_SELECTED':
             newState = action.click;
             return newState;
-        case 'NINTENDO_BUTTON_SELECTED':
+        case 'MEAT_BUTTON_SELECTED':
             newState = action.click;
             return newState;
         case 'PREFERENCE_BUTTON_SELECTED':
