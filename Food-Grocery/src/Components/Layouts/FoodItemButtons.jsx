@@ -36,13 +36,13 @@ class ConsoleButtons extends React.Component {
 				fullWidth
 				centered
 			>
-
+				//category = "produce", "dairy", "meat", "seafood", "non-perishables", "drinks"
 				<Tab label="All" onClick={this.props.allGamesClick} />
-				<Tab label="Xbox One" onClick={this.props.xBoxClick} />
-				<Tab label="PS4" onClick={this.props.playStationClick} />
-				<Tab label="Wii U" onClick={this.props.nintendoClick} />
-				<Tab label="PC" onClick={this.props.computerClick} />
-				<Tab label="Switch" onClick={this.props.handHeldClick} />
+				<Tab label="Produce" onClick={this.props.xBoxClick} />
+				<Tab label="Dairy" onClick={this.props.playStationClick} />
+				<Tab label="Meat" onClick={this.props.nintendoClick} />
+				<Tab label="Seafood" onClick={this.props.computerClick} />
+				<Tab label="Non-Perishables" onClick={this.props.handHeldClick} />
 				<Tab label="Preferences" onClick={this.props.preferenceClick} />
 			</Tabs>
 		);

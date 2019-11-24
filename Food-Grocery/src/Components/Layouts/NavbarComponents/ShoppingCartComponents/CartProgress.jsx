@@ -6,7 +6,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import GamesTable from './GamesTable';
+import GamesTable from './FoodTable';
 import UserPaymentInfo from './UserPaymentInfo';
 import PaymentReviewInfo from './PaymentReviewInfo';
 import { clearCart } from '../../../../Actions/ClearCart';

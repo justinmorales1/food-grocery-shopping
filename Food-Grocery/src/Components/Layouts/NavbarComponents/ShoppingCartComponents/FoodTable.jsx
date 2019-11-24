@@ -42,7 +42,7 @@ const styles = {
   }
 };
 
-class GamesTable extends React.Component {
+class FoodTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -135,4 +135,4 @@ let mapStateToProps = (dispatch) => {
   }
 };
 
-export default connect(null, mapStateToProps)(GamesTable);
+export default connect(null, mapStateToProps)(FoodTable);
