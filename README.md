@@ -1,2 +1,2 @@
-# e-commerce-gaming
-A website that sells games.
+# Food Shopping Online
+This is a website that sells food online and delivers it straight to your door.

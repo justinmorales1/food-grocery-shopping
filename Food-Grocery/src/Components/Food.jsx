@@ -1,8 +1,8 @@
 import React from 'react';
 import { Paper, Grid  } from '@material-ui/core';
-import SelectedGamesComponent from './SelectedGamesComponent'
+import SelectedGamesComponent from './SelectFood'
 
-class Games extends React.Component {
+class Food extends React.Component {
 
   render() {
     return (
@@ -17,4 +17,4 @@ class Games extends React.Component {
   }
 }
 
-export default Games;
+export default Food;

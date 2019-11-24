@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import ConsoleButtons from './Components/Layouts/ConsoleButtons';
 import Navbar from './Components/Layouts/Navbar';
-import Games from './Components/Games'
+import Games from './Components/Food'
 import GenreButtons from './Components/GenreButtons'
 
 class App extends Component {
