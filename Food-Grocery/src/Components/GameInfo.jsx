@@ -72,11 +72,6 @@ class GameInfo extends React.Component {
           <DialogTitle id="alert-dialog-title">{this.props.Title}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-            <YouTube
-            videoId={this.props.youtubeId}
-           opts={opts}
-            onReady={this._onReady}
-           />
               {this.props.Description}
             </DialogContentText>
           </DialogContent>
