@@ -42,8 +42,6 @@ class GameInfo extends React.Component {
   };
 
  
-  
-
 
   render() {
     const classes = this.props;   

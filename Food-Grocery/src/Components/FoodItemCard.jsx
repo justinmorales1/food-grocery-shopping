@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import {AddShoppingCart as Add} from '@material-ui/icons';
 import { addItem } from '../Actions/AddItemsToCart';
 import Snackbar from '@material-ui/core/Snackbar';
-import GameInfo from './GameInfo'
+import GameInfo from './FoodInformation'
 import MySnackbarContent from './CustomSnackbar';
   
 const styles = {

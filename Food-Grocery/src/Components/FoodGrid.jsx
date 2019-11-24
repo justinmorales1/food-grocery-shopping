@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import {Grid} from '@material-ui/core'
-import GameCard from './FoodItemCard'
+import FoodCard from './FoodItemCard'
 
 const styles = {
     grid:{
@@ -11,30 +11,23 @@ const styles = {
 }
 
 
-
-
-
-class GameGrid extends React.Component{
+class FoodGrid extends React.Component{
     styles = this.props.styles;
     render() {
         const classes = this.props
-        const gameCards = classes.GameList.map((game) =>       
-           <GameCard price={game.price} imgURL={game.url} Title={game.title} Description={game.description} youtubeId ={game.youtubeId}/> 
+        const foodCards = classes.GameList.map((food) =>
+           <FoodCard price={food.price} imgURL={food.url} Title={food.title} Description={food.description} youtubeId ={food.youtubeId}/>
         );
         return(
             <Grid style={styles.grid} container justify="center">
-                {gameCards}
+                {foodCards}
             </Grid>
         );
     }
-
-
 }
 
-
-
-GameGrid.propTypes = {
+FoodGrid.propTypes = {
     classes: PropTypes.object.isRequired,
   };
 
-export default withStyles(styles)(GameGrid);
+export default withStyles(styles)(FoodGrid);

@@ -4,7 +4,7 @@ import FLOW_STATE from '../Constants/flowstates'
 import BUTTON_STATE from '../Constants/buttonStates'
 import {mainPageState} from '../Actions/MainPageAction'
 import groceryList from '../groceryList.json'
-import GameGrid from './GameGrid'
+import GameGrid from './FoodGrid'
 
 
 const styles = {
@@ -56,7 +56,7 @@ class SelectedGamesComponent extends React.Component {
         //
         //             return (
         //                 <div>
-        //                     <GameGrid
+        //                     <FoodGrid
         //                         GameList={games.filter(function(game){
         //
         //                         if(game.console == one){
@@ -96,7 +96,7 @@ class SelectedGamesComponent extends React.Component {
         //
         //     return (
         //         <div>
-        //             <GameGrid
+        //             <FoodGrid
         //                 GameList={games.filter(function(game){
         //                 if(game.console == "computer" ){
         //                         return game;
@@ -113,7 +113,7 @@ class SelectedGamesComponent extends React.Component {
         //     if( this.props.state.genreButtonState == "SPORTS_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "computer" && game.genre == "Sports" ){
         //                         return game;
@@ -126,7 +126,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "RPG_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "computer" && game.genre == "Roleplaying" ){
         //                         return game;
@@ -139,7 +139,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "SHOOTER_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "computer" && game.genre == "Shooter" ){
         //                         return game;
@@ -152,7 +152,7 @@ class SelectedGamesComponent extends React.Component {
         //     }  else if( this.props.state.genreButtonState == "ADVENTURE_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "computer" && game.genre == "Action-adventure" ){
         //                         return game;
@@ -165,7 +165,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "STRATEGY_BUTTON_SELECTED"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "computer" && game.genre == "Strategy" ){
         //                         return game;
@@ -178,7 +178,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "RACING_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "computer" && game.genre == "Racing" ){
         //                         return game;
@@ -192,7 +192,7 @@ class SelectedGamesComponent extends React.Component {
         //     else if( this.props.state.genreButtonState == "ALLGENRES_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "computer"){
         //                         return game;
@@ -212,7 +212,7 @@ class SelectedGamesComponent extends React.Component {
         //
         //     return (
         //         <div>
-        //             <GameGrid
+        //             <FoodGrid
         //                 GameList={games.filter(function(game){
         //                 if(game.console == "nintendo" ){
         //                         return game;
@@ -229,7 +229,7 @@ class SelectedGamesComponent extends React.Component {
         //     if( this.props.state.genreButtonState == "SPORTS_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "nintendo" && game.genre == "Sports" ){
         //                         return game;
@@ -242,7 +242,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "RPG_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "nintendo" && game.genre == "Roleplaying" ){
         //                         return game;
@@ -255,7 +255,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "SHOOTER_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "nintendo" && game.genre == "Shooter" ){
         //                         return game;
@@ -268,7 +268,7 @@ class SelectedGamesComponent extends React.Component {
         //     }  else if( this.props.state.genreButtonState == "ADVENTURE_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "nintendo" && game.genre == "Action-adventure" ){
         //                         return game;
@@ -281,7 +281,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "STRATEGY_BUTTON_SELECTED"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "nintendo" && game.genre == "Strategy" ){
         //                         return game;
@@ -294,7 +294,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "RACING_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "nintendo" && game.genre == "Racing" ){
         //                         return game;
@@ -307,7 +307,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "ALLGENRES_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "nintendo"){
         //                         return game;
@@ -328,7 +328,7 @@ class SelectedGamesComponent extends React.Component {
         //
         //     return (
         //         <div>
-        //             <GameGrid
+        //             <FoodGrid
         //                 GameList={games.filter(function(game){
         //                 if(game.console == "xbox one" ){
         //                         return game;
@@ -345,7 +345,7 @@ class SelectedGamesComponent extends React.Component {
         //     if( this.props.state.genreButtonState == "SPORTS_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "xbox one" && game.genre == "Sports" ){
         //                         return game;
@@ -358,7 +358,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "RPG_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "xbox one" && game.genre == "Roleplaying" ){
         //                         return game;
@@ -371,7 +371,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "SHOOTER_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "xbox one" && game.genre == "Shooter" ){
         //                         return game;
@@ -384,7 +384,7 @@ class SelectedGamesComponent extends React.Component {
         //     }  else if( this.props.state.genreButtonState == "ADVENTURE_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "xbox one" && game.genre == "Action-adventure" ){
         //                         return game;
@@ -397,7 +397,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "STRATEGY_BUTTON_SELECTED"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "xbox one" && game.genre == "Strategy" ){
         //                         return game;
@@ -410,7 +410,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "RACING_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "xbox one" && game.genre == "Racing" ){
         //                         return game;
@@ -423,7 +423,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "ALLGENRES_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "xbox one"){
         //                         return game;
@@ -444,7 +444,7 @@ class SelectedGamesComponent extends React.Component {
         //
         //     return (
         //         <div>
-        //             <GameGrid
+        //             <FoodGrid
         //                 GameList={games.filter(function(game){
         //                 if(game.console == "PS4" ){
         //                         return game;
@@ -461,7 +461,7 @@ class SelectedGamesComponent extends React.Component {
         //     if( this.props.state.genreButtonState == "SPORTS_BUTTON"){
         //     return (
         //         <div>
-        //             <GameGrid
+        //             <FoodGrid
         //                 GameList={games.filter(function(game){
         //                 if(game.console == "PS4" && game.genre == "Sports" ){
         //                         return game;
@@ -474,7 +474,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "RPG_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "PS4" && game.genre == "Roleplaying" ){
         //                         return game;
@@ -487,7 +487,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "SHOOTER_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "PS4" && game.genre == "Shooter" ){
         //                         return game;
@@ -500,7 +500,7 @@ class SelectedGamesComponent extends React.Component {
         //     }  else if( this.props.state.genreButtonState == "ADVENTURE_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "PS4" && game.genre == "Action-adventure" ){
         //                         return game;
@@ -513,7 +513,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "STRATEGY_BUTTON_SELECTED"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "PS4" && game.genre == "Strategy" ){
         //                         return game;
@@ -526,7 +526,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "RACING_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "PS4" && game.genre == "Racing" ){
         //                         return game;
@@ -539,7 +539,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "ALLGENRES_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "PS4"){
         //                         return game;
@@ -565,7 +565,7 @@ class SelectedGamesComponent extends React.Component {
         //
         //     return (
         //         <div>
-        //             <GameGrid
+        //             <FoodGrid
         //                 GameList={games.filter(function(game){
         //                 if(game.console == "hand held" ){
         //                         return game;
@@ -583,7 +583,7 @@ class SelectedGamesComponent extends React.Component {
         //     if( this.props.state.genreButtonState == "SPORTS_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "hand held" && game.genre == "Sports" ){
         //                         return game;
@@ -596,7 +596,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "RPG_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "hand held" && game.genre == "Roleplaying" ){
         //                         return game;
@@ -609,7 +609,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "SHOOTER_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "hand held" && game.genre == "Shooter" ){
         //                         return game;
@@ -622,7 +622,7 @@ class SelectedGamesComponent extends React.Component {
         //     }  else if( this.props.state.genreButtonState == "ADVENTURE_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "hand held" && game.genre == "Action-adventure" ){
         //                         return game;
@@ -635,7 +635,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "STRATEGY_BUTTON_SELECTED"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "hand held" && game.genre == "Strategy" ){
         //                         return game;
@@ -648,7 +648,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "RACING_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "hand held" && game.genre == "Racing" ){
         //                         return game;
@@ -661,7 +661,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "ALLGENRES_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.console == "hand held"){
         //                         return game;
@@ -683,7 +683,7 @@ class SelectedGamesComponent extends React.Component {
         //
         //     return (
         //         <div>
-        //             <GameGrid
+        //             <FoodGrid
         //                 GameList={games.filter(function(game){
         //                         return game;
         //
@@ -700,7 +700,7 @@ class SelectedGamesComponent extends React.Component {
         //     if( this.props.state.genreButtonState == "SPORTS_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.genre == "Sports" ){
         //                         return game;
@@ -713,7 +713,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "RPG_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.genre == "Roleplaying" ){
         //                         return game;
@@ -726,7 +726,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "SHOOTER_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.genre == "Shooter" ){
         //                         return game;
@@ -739,7 +739,7 @@ class SelectedGamesComponent extends React.Component {
         //     }  else if( this.props.state.genreButtonState == "ADVENTURE_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if( game.genre == "Action-adventure" ){
         //                         return game;
@@ -752,7 +752,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "STRATEGY_BUTTON_SELECTED"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.genre == "Strategy" ){
         //                         return game;
@@ -765,7 +765,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "RACING_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //                 if(game.genre == "Racing" ){
         //                         return game;
@@ -778,7 +778,7 @@ class SelectedGamesComponent extends React.Component {
         //     } else if( this.props.state.genreButtonState == "ALLGENRES_BUTTON"){
         //         return (
         //             <div>
-        //                 <GameGrid
+        //                 <FoodGrid
         //                     GameList={games.filter(function(game){
         //
         //                         return game;
@@ -804,7 +804,7 @@ class SelectedGamesComponent extends React.Component {
     //
     //             <div>
     //
-    //                 <GameGrid
+    //                 <FoodGrid
     //                     GameList={games.filter(function(game){
     //                          if(game.title.includes(wordSearch)){
     //
