@@ -91,14 +91,14 @@ class SelectedGamesComponent extends React.Component {
 
 
 
-        if (this.props.state.mainButtonState === BUTTON_STATE.COMPUTERPAGEBUTTON) {
+        if (this.props.state.mainButtonState === BUTTON_STATE.DAIRY_BUTTON_SELECTED) {
 
-
+            console.log(groceryList.console)
             return (
                 <div>
                     <FoodGrid
                         GameList={groceryList.filter(function(groceryList){
-                        if(groceryList.console == "computer" ){
+                        if(groceryList.category == "dairy" ){
                                 return groceryList;
                             }
 
@@ -109,21 +109,60 @@ class SelectedGamesComponent extends React.Component {
             )
 
         }
-        if (this.props.state.mainButtonState === BUTTON_STATE.COMPUTERPAGEBUTTON) {
-            if( this.props.state.genreButtonState == "SPORTS_BUTTON"){
+        if (this.props.state.mainButtonState === BUTTON_STATE.SEAFOOD_PAGE_BUTTON) {
                 return (
                     <div>
                         <FoodGrid
                             GameList={groceryList.filter(function(groceryList){
-                        if(groceryList.console == "computer" && groceryList.genre == "Sports" ){
+                        if(groceryList.category == "seafood" ){
                                 return groceryList;
                             }
-
                         })}
                         />
                     </div>
                 )
-            }
+
+        }
+        if (this.props.state.mainButtonState === BUTTON_STATE.MEAT_PAGE_BUTTON) {
+            return (
+                <div>
+                    <FoodGrid
+                        GameList={groceryList.filter(function(groceryList){
+                            if(groceryList.category == "meat" ){
+                                return groceryList;
+                            }
+                        })}
+                    />
+                </div>
+            )
+
+        }
+        if (this.props.state.mainButtonState === BUTTON_STATE.PRODUCE_PAGE_BUTTON) {
+            return (
+                <div>
+                    <FoodGrid
+                        GameList={groceryList.filter(function(groceryList){
+                            if(groceryList.category == "produce" ){
+                                return groceryList;
+                            }
+                        })}
+                    />
+                </div>
+            )
+
+        }
+        if (this.props.state.mainButtonState === BUTTON_STATE.NON_PERSIHABLES_PAGE_BUTTON) {
+            return (
+                <div>
+                    <FoodGrid
+                        GameList={groceryList.filter(function(groceryList){
+                            if(groceryList.category == "non-perishables" ){
+                                return groceryList;
+                            }
+                        })}
+                    />
+                </div>
+            )
 
         }
         // if (this.props.state.mainButtonState === BUTTON_STATE.NINTENDOBUTTON && this.props.state.genreButtonState == null) {

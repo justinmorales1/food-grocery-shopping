@@ -43,7 +43,6 @@ class ConsoleButtons extends React.Component {
 				<Tab label="Meat" onClick={this.props.meatClick} />
 				<Tab label="Seafood" onClick={this.props.seafoodClick} />
 				<Tab label="Non-Perishables" onClick={this.props.nonPerishableClick} />
-				<Tab label="Preferences" onClick={this.props.preferenceClick} />
 			</Tabs>
 		);
 	}
@@ -57,10 +56,9 @@ const mapStateToProps = (state) => {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		preferenceClick: () => dispatch(preferenceClick(FLOW_STATE.PREFERENCEBUTTON)),
     	allFoodClick: () => dispatch(allFoodsClick(FLOW_STATE.ALL_FOOD_BUTTON)),
 		produceClick: () => dispatch(produceClick(FLOW_STATE.PRODUCE_PAGE_BUTTON)),
-		dairyClick: () => dispatch(dairyClick(FLOW_STATE.DAIRY_PAGE_BUTTON)),
+		dairyClick: () => dispatch(dairyClick(FLOW_STATE.DAIRY_BUTTON_SELECTED)),
 		meatClick: () => dispatch(meatClick(FLOW_STATE.MEAT_PAGE_BUTTON)),
 		seafoodClick: () => dispatch(seaFoodClick(FLOW_STATE.SEAFOOD_PAGE_BUTTON)),
 		nonPerishableClick: () => dispatch(nonperishableClick(FLOW_STATE.NON_PERSIHABLES_PAGE_BUTTON)),
