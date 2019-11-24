@@ -7,19 +7,7 @@ import groceryList from '../groceryList.json'
 import FoodGrid from './FoodGrid'
 
 
-const styles = {
-    notLoggedIn: {
-        position: "absolute",
-        left: 200,
-        right: 200,
-
-
-    },
-
-}
-
 class SelectedGamesComponent extends React.Component {
-
 
     render() {
 

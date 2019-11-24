@@ -111,7 +111,7 @@ class FoodCard extends React.Component{
           <Typography gutterBottom  style={styles.Price} align='center'>
             <div>
               <img style={{ width: 27, height: 27 }} src="https://cdn2.iconfinder.com/data/icons/e-commerce-4/256/Price_Tag-512.png" />
-              {classes.price.slice(1, 3)}
+              {classes.price.slice(0, 5)}
               <div style={{ fontSize: 17, display: 'inline', position: 'relative', bottom: 12 }}>{classes.price.slice(4, classes.price.length)}</div>
             </div>
           </Typography>
