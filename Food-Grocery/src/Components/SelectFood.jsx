@@ -4,7 +4,7 @@ import FLOW_STATE from '../Constants/flowstates'
 import BUTTON_STATE from '../Constants/buttonStates'
 import {mainPageState} from '../Actions/MainPageAction'
 import groceryList from '../groceryList.json'
-import GameGrid from './FoodGrid'
+import FoodGrid from './FoodGrid'
 
 
 const styles = {
@@ -29,7 +29,7 @@ class SelectedGamesComponent extends React.Component {
         if(this.props.state.currentPageState === FLOW_STATE.SEARCH ) {
             return (
                 <div>
-                    <GameGrid
+                    <FoodGrid
                         GameList={groceryList.filter(function(groceryList){
                             if(groceryList.title.includes(wordSearch)){
                                 return groceryList;
@@ -40,173 +40,92 @@ class SelectedGamesComponent extends React.Component {
             )
         }
 
-        //if ((this.props.state.mainButtonState === "PREFERENCE_BUTTON" && this.props.state.currentPageState === FLOW_STATE.MAINPAGE )&& this.props.state.genreButtonState == null) {
-        //
-        //     if (this.props.state.currentUserHandler.isLoggedIn == false) {
-        //         return (
-        //             <h1 style={styles.notLoggedIn}>
-        //                 Not Logged in. To view preferences please log in.
-        //
-        //             </h1>
-        //         )
-        //     } else {
-        //         if (this.props.state.currentUserHandler.user.gamePreferences != undefined) {
-        //             var [one = '', two = '', three = '', four = '', five = ''] = preferenceGames;
-        //
-        //
-        //             return (
-        //                 <div>
-        //                     <FoodGrid
-        //                         GameList={games.filter(function(game){
-        //
-        //                         if(game.console == one){
-        //                         return game;
-        //                         }
-        //                         if(game.console == two){
-        //                         return game;
-        //                         }
-        //                         if(game.console == three){
-        //                         return game;
-        //                         }
-        //                         if(game.console == four){
-        //                         return game;
-        //                         }
-        //                         if(game.console == five){
-        //                         return game;
-        //                         }
-        //
-        //
-        //
-        //                 })}
-        //                     />
-        //
-        //                 </div>
-        //             )
-        //
-        //         }
-        //
-        //     }
-        //
-        // }
-        //
-        //
-        //
-        // if (this.props.state.mainButtonState === BUTTON_STATE.COMPUTERPAGEBUTTON && this.props.state.genreButtonState == null) {
-        //
-        //
-        //     return (
-        //         <div>
-        //             <FoodGrid
-        //                 GameList={games.filter(function(game){
-        //                 if(game.console == "computer" ){
-        //                         return game;
-        //                     }
-        //
-        //                 })}
-        //             />
-        //
-        //         </div>
-        //     )
-        //
-        // }
-        // if (this.props.state.mainButtonState === BUTTON_STATE.COMPUTERPAGEBUTTON && this.props.state.genreButtonState != null) {
-        //     if( this.props.state.genreButtonState == "SPORTS_BUTTON"){
-        //         return (
-        //             <div>
-        //                 <FoodGrid
-        //                     GameList={games.filter(function(game){
-        //                 if(game.console == "computer" && game.genre == "Sports" ){
-        //                         return game;
-        //                     }
-        //
-        //                 })}
-        //                 />
-        //             </div>
-        //         )
-        //     } else if( this.props.state.genreButtonState == "RPG_BUTTON"){
-        //         return (
-        //             <div>
-        //                 <FoodGrid
-        //                     GameList={games.filter(function(game){
-        //                 if(game.console == "computer" && game.genre == "Roleplaying" ){
-        //                         return game;
-        //                     }
-        //
-        //                 })}
-        //                 />
-        //             </div>
-        //         )
-        //     } else if( this.props.state.genreButtonState == "SHOOTER_BUTTON"){
-        //         return (
-        //             <div>
-        //                 <FoodGrid
-        //                     GameList={games.filter(function(game){
-        //                 if(game.console == "computer" && game.genre == "Shooter" ){
-        //                         return game;
-        //                     }
-        //
-        //                 })}
-        //                 />
-        //             </div>
-        //         )
-        //     }  else if( this.props.state.genreButtonState == "ADVENTURE_BUTTON"){
-        //         return (
-        //             <div>
-        //                 <FoodGrid
-        //                     GameList={games.filter(function(game){
-        //                 if(game.console == "computer" && game.genre == "Action-adventure" ){
-        //                         return game;
-        //                     }
-        //
-        //                 })}
-        //                 />
-        //             </div>
-        //         )
-        //     } else if( this.props.state.genreButtonState == "STRATEGY_BUTTON_SELECTED"){
-        //         return (
-        //             <div>
-        //                 <FoodGrid
-        //                     GameList={games.filter(function(game){
-        //                 if(game.console == "computer" && game.genre == "Strategy" ){
-        //                         return game;
-        //                     }
-        //
-        //                 })}
-        //                 />
-        //             </div>
-        //         )
-        //     } else if( this.props.state.genreButtonState == "RACING_BUTTON"){
-        //         return (
-        //             <div>
-        //                 <FoodGrid
-        //                     GameList={games.filter(function(game){
-        //                 if(game.console == "computer" && game.genre == "Racing" ){
-        //                         return game;
-        //                     }
-        //
-        //                 })}
-        //                 />
-        //             </div>
-        //         )
-        //     }
-        //     else if( this.props.state.genreButtonState == "ALLGENRES_BUTTON"){
-        //         return (
-        //             <div>
-        //                 <FoodGrid
-        //                     GameList={games.filter(function(game){
-        //                 if(game.console == "computer"){
-        //                         return game;
-        //                     }
-        //
-        //                 })}
-        //                 />
-        //             </div>
-        //         )
-        //     }
-        //
-        //
-        //
-        // }
+        if ((this.props.state.mainButtonState === "PREFERENCE_BUTTON" && this.props.state.currentPageState === FLOW_STATE.MAINPAGE )&& this.props.state.genreButtonState == null) {
+
+            if (this.props.state.currentUserHandler.isLoggedIn == false) {
+                return (
+                    <h1 style={styles.notLoggedIn}>
+                        Not Logged in. To view preferences please log in.
+
+                    </h1>
+                )
+            } else {
+                if (this.props.state.currentUserHandler.user.gamePreferences != undefined) {
+                    var [one = '', two = '', three = '', four = '', five = ''] = preferenceGames;
+
+
+                    return (
+                        <div>
+                            <FoodGrid
+                                GameList={groceryList.filter(function(groceryList){
+
+                                if(groceryList.console == one){
+                                return groceryList;
+                                }
+                                if(groceryList.console == two){
+                                return groceryList;
+                                }
+                                if(groceryList.console == three){
+                                return groceryList;
+                                }
+                                if(groceryList.console == four){
+                                return groceryList;
+                                }
+                                if(groceryList.console == five){
+                                return groceryList;
+                                }
+
+
+
+                        })}
+                            />
+
+                        </div>
+                    )
+
+                }
+
+            }
+
+        }
+
+
+
+        if (this.props.state.mainButtonState === BUTTON_STATE.COMPUTERPAGEBUTTON) {
+
+
+            return (
+                <div>
+                    <FoodGrid
+                        GameList={groceryList.filter(function(groceryList){
+                        if(groceryList.console == "computer" ){
+                                return groceryList;
+                            }
+
+                        })}
+                    />
+
+                </div>
+            )
+
+        }
+        if (this.props.state.mainButtonState === BUTTON_STATE.COMPUTERPAGEBUTTON) {
+            if( this.props.state.genreButtonState == "SPORTS_BUTTON"){
+                return (
+                    <div>
+                        <FoodGrid
+                            GameList={groceryList.filter(function(groceryList){
+                        if(groceryList.console == "computer" && groceryList.genre == "Sports" ){
+                                return groceryList;
+                            }
+
+                        })}
+                        />
+                    </div>
+                )
+            }
+
+        }
         // if (this.props.state.mainButtonState === BUTTON_STATE.NINTENDOBUTTON && this.props.state.genreButtonState == null) {
         //
         //
@@ -824,7 +743,7 @@ class SelectedGamesComponent extends React.Component {
         if(this.props.state.currentPageState === FLOW_STATE.MAINPAGE && this.props.state.mainButtonState != null) {
             return (
                 <div>
-                    <GameGrid GameList={groceryList}/>
+                    <FoodGrid GameList={groceryList}/>
 
                 </div>
             )

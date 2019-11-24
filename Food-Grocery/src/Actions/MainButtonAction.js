@@ -1,4 +1,4 @@
-export function allGamesClick(click) {
+export function allFoodsClick(click) {
 
     return {
         type: 'ALL_GAMES_BUTTON_SELECTED',
@@ -7,7 +7,7 @@ export function allGamesClick(click) {
     }
 }
 
-export function xBoxClick(click) {
+export function produceClick(click) {
     
     return {
         type: 'XBOX_BUTTON_SELECTED',
@@ -16,7 +16,7 @@ export function xBoxClick(click) {
     }
 }
 
-export function playStationClick(click) {
+export function dairyClick(click) {
 
     return {
         type: 'PLAYSTATION_BUTTON_SELECTED',
@@ -25,7 +25,7 @@ export function playStationClick(click) {
     }
 }
 
-export function computerClick(click) {
+export function seaFoodClick(click) {
 
     return {
         type: 'COMPUTER_BUTTON_SELECTED',
@@ -34,7 +34,7 @@ export function computerClick(click) {
     }
 }
 
-export function handHeldClick(click) {
+export function nonperishableClick(click) {
 
     return {
         type: 'HANDHELD_BUTTON_SELECTED',
@@ -43,7 +43,7 @@ export function handHeldClick(click) {
     }
 }
 
-export function nintendoClick(click) {
+export function meatClick(click) {
 
     return {
         type: 'NINTENDO_BUTTON_SELECTED',

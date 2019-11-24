@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs, Tab } from '@material-ui/core';
 import { connect } from 'react-redux'
-import { playStationClick,computerClick,handHeldClick,xBoxClick,nintendoClick, allGamesClick, preferenceClick} from '../../Actions/MainButtonAction';
+import { dairyClick,seaFoodClick,nonperishableClick,produceClick,meatClick, allFoodsClick, preferenceClick} from '../../Actions/MainButtonAction';
 import FLOW_STATE from '../../Constants/buttonStates'
 
 const tabStyle = {
@@ -37,12 +37,12 @@ class ConsoleButtons extends React.Component {
 				centered
 			>
 				//category = "produce", "dairy", "meat", "seafood", "non-perishables", "drinks"
-				<Tab label="All" onClick={this.props.allGamesClick} />
-				<Tab label="Produce" onClick={this.props.xBoxClick} />
-				<Tab label="Dairy" onClick={this.props.playStationClick} />
-				<Tab label="Meat" onClick={this.props.nintendoClick} />
-				<Tab label="Seafood" onClick={this.props.computerClick} />
-				<Tab label="Non-Perishables" onClick={this.props.handHeldClick} />
+				<Tab label="All" onClick={this.props.allFoodClick} />
+				<Tab label="Produce" onClick={this.props.produceClick} />
+				<Tab label="Dairy" onClick={this.props.dairyClick} />
+				<Tab label="Meat" onClick={this.props.meatClick} />
+				<Tab label="Seafood" onClick={this.props.seafoodClick} />
+				<Tab label="Non-Perishables" onClick={this.props.nonPerishableClick} />
 				<Tab label="Preferences" onClick={this.props.preferenceClick} />
 			</Tabs>
 		);
@@ -50,7 +50,6 @@ class ConsoleButtons extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-	console.log("The mapStateToProps in ConsoleButtons is");
 	return {
 		state: state,
 	};
@@ -59,12 +58,12 @@ const mapStateToProps = (state) => {
 function mapDispatchToProps(dispatch) {
 	return {
 		preferenceClick: () => dispatch(preferenceClick(FLOW_STATE.PREFERENCEBUTTON)),
-    	allGamesClick: () => dispatch(allGamesClick(FLOW_STATE.ALLGAMESPAGEBUTTON)),
-		xBoxClick: () => dispatch(xBoxClick(FLOW_STATE.XBOXPAGEBUTTON)),
-		playStationClick: () => dispatch(playStationClick(FLOW_STATE.PS4PAGEBUTTON)),
-		nintendoClick: () => dispatch(nintendoClick(FLOW_STATE.NINTENDOBUTTON)),
-		computerClick: () => dispatch(computerClick(FLOW_STATE.COMPUTERPAGEBUTTON)),
-		handHeldClick: () => dispatch(handHeldClick(FLOW_STATE.HANDHELDPAGEBUTTON)),
+    	allFoodClick: () => dispatch(allFoodsClick(FLOW_STATE.ALL_FOOD_BUTTON)),
+		produceClick: () => dispatch(produceClick(FLOW_STATE.PRODUCE_PAGE_BUTTON)),
+		dairyClick: () => dispatch(dairyClick(FLOW_STATE.DAIRY_PAGE_BUTTON)),
+		meatClick: () => dispatch(meatClick(FLOW_STATE.MEAT_PAGE_BUTTON)),
+		seafoodClick: () => dispatch(seaFoodClick(FLOW_STATE.SEAFOOD_PAGE_BUTTON)),
+		nonPerishableClick: () => dispatch(nonperishableClick(FLOW_STATE.NON_PERSIHABLES_PAGE_BUTTON)),
 
 	}
 }
