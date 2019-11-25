@@ -17,8 +17,6 @@ import {
 import { SupervisorAccount } from '@material-ui/icons';
 import Cryptr from 'cryptr';
 
-const consoleGamesPreferences = [ 'Xbox One', 'PS4', 'PC', 'Nintendo', 'Hand Held' ];
-
 class Register extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +34,6 @@ class Register extends React.Component {
       passwordConfirmErr: false,
       passwordHelperText: '',
       emailHelperText: '',
-      gamePreferences: []
     };
   }
 
@@ -83,10 +80,6 @@ class Register extends React.Component {
 
   handlePasswordConfirmChange = (e) => {
     this.setState({ passwordConfirm: e.target.value });
-  };
-
-  handleGamesPreferencesChange = (e) => {
-    this.setState({ gamePreferences: e.target.value });
   };
 
   handleRegister = (e) => {
@@ -154,23 +147,8 @@ class Register extends React.Component {
 
   handleSavingUser = () => {
     let hashedPassword = this.encryptPassword(this.state.password);
-    let user = { name: this.state.name, address: this.state.address, email: this.state.email, password: hashedPassword, gamePreferences: this.customizePreferencesBasedOnJSON() };
+    let user = { name: this.state.name, address: this.state.address, email: this.state.email, password: hashedPassword};
     this.props.updateUserObject(user);
-  };
-
-  customizePreferencesBasedOnJSON = () => {
-    let customizedPreferences = [];
-    for (let i = 0; i < this.state.gamePreferences.length; i++) {
-      if (this.state.gamePreferences[i] == 'PC') {
-        customizedPreferences.push('computer');
-      } else if (this.state.gamePreferences[i] != 'PS4') {
-        customizedPreferences.push(this.state.gamePreferences[i].toLowerCase());
-      } else {
-        // PS4
-        customizedPreferences.push(this.state.gamePreferences[i]);
-      }
-    }
-    return customizedPreferences;
   };
 
   updateUIForLoggedUser = () => {
@@ -219,21 +197,6 @@ class Register extends React.Component {
               margin="dense" id="password-confirm" label="Confirm Password" type="password" required fullWidth
             />
             <InputLabel htmlFor="select-multiple-checkbox">Game Preferences</InputLabel>
-            <Select
-              multiple
-              value={this.state.gamePreferences}
-              onChange={this.handleGamesPreferencesChange}
-              input={<Input id="select-multiple-checkbox" />}
-              renderValue={selected => selected.join(', ')}
-              fullWidth
-            >
-              {consoleGamesPreferences.map(name => (
-                <MenuItem key={name} value={name}>
-                  <Checkbox checked={this.state.gamePreferences.indexOf(name) > -1} />
-                  <ListItemText primary={name} />
-                </MenuItem>
-              ))}
-            </Select>
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">

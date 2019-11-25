@@ -7,7 +7,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 const styles = {
-  gameImage: {
+  foodImage: {
     height: 150,
     width: 150,
   },
@@ -54,7 +54,6 @@ class PaymentReviewInfo extends React.Component {
   
   render() {
     const itemObjects = this.props.itemObjects;
-    const selectedNumberOfItemsPerGame = this.props.selectedNumberOfItemsPerGame;
 
     return (
       <Paper elevation={2}>
@@ -75,7 +74,7 @@ class PaymentReviewInfo extends React.Component {
             {itemObjects.map((item, i) => {
               return(
                 <ListItem key={i}>
-                  <img style={styles.gameImage} src={item.url}/>
+                  <img style={styles.foodImage} src={item.url}/>
                   <ListItemText 
                     primary={item.title}
                     secondary={`Price: ${item.price} x${this.props.selectedNumberOfItemsPerGame[i]}`} />

@@ -1,9 +1,9 @@
 
 const initialState = { items:[] }
 
-let isNewGameInCart = (gamesInCart, game) => {
-  for (let i = 0; i < gamesInCart.length; i++) {
-    if (gamesInCart[i].title === game.title) {
+let isNewFoodInTheCart = (foodInCart, food) => {
+  for (let i = 0; i < foodInCart.length; i++) {
+    if (foodInCart[i].title === food.title) {
       return false;
     }
   }
@@ -15,7 +15,7 @@ let addToCartReducer = (state = initialState, action) => {
   
   switch(action.type) {
     case 'ADD_ITEM':
-      if (isNewGameInCart(state.items, action.item)) {
+      if (isNewFoodInTheCart(state.items, action.item)) {
         return {
           ...state,
           items: [...state.items, action.item]
