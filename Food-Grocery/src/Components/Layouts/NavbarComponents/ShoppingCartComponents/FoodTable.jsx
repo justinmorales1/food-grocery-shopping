@@ -37,7 +37,7 @@ const styles = {
     top: 7,
     left: -10
   },
-  gameItem: {
+  foodItem: {
     display: 'inline'
   }
 };
@@ -98,7 +98,7 @@ class FoodTable extends React.Component {
                     <div style={styles.deleteButton} onClick={() => this.handleRemoveGameFromCard(i)}>
                       <RemoveCircle />
                     </div>
-                    <div style={styles.gameItem}>
+                    <div style={styles.foodItem}>
                       {item.title}
                     </div>
                   </TableCell>

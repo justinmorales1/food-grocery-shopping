@@ -196,7 +196,6 @@ class Register extends React.Component {
               error={this.state.passwordConfirmErr} helperText={this.state.passwordHelperText}
               margin="dense" id="password-confirm" label="Confirm Password" type="password" required fullWidth
             />
-            <InputLabel htmlFor="select-multiple-checkbox">Game Preferences</InputLabel>
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">

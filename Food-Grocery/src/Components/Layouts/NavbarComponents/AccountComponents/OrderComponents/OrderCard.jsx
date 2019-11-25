@@ -19,20 +19,20 @@ const styles = {
     height: '180px',
     paddingTop: '56.25%', // 16:9
   },
-  gameTitleStyle: {
+  foodStyles: {
     textDecoration: 'underline',
     fontSize: 17,
     cursor: 'pointer',
     color: '#3A4BAD'
   },
-  gamePrice: {
+  foodPrices: {
     fontSize: 14,
     color: '#B12805'
   },
   button: {
     fontSize: 10
   },
-  gameOrderPlacedOn: {
+  foodOrderPlaced: {
     fontSize: 14,
     marginTop: 5
   }
@@ -52,15 +52,15 @@ class OrderCard extends React.Component {
             image={this.props.imgURL}
           />
           <CardContent>
-            <Typography gutterBottom variant="headline" component="h4" style={styles.gameTitleStyle}>
-              {this.props.gameTitle}
+            <Typography gutterBottom variant="headline" component="h4" style={styles.foodStyles}>
+              {this.props.foodTitle}
             </Typography>
-            <div style={styles.gameOrderPlacedOn}>
-              Price: <span style={styles.gamePrice}> {this.props.price} </span>
+            <div style={styles.foodOrderPlaced}>
+              Price: <span style={styles.foodPrices}> {this.props.price} </span>
             </div>
-            <div style={styles.gameOrderPlacedOn}>
+            <div style={styles.foodOrderPlaced}>
               Order placed on:
-              <span style={styles.gamePrice}>
+              <span style={styles.foodPrices}>
                 {' ' + this.props.orderPlacedOn}
               </span>
             </div>
