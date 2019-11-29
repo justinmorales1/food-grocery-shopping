@@ -6,7 +6,9 @@ import FoodCard from './FoodItemCard';
 
 const styles = {
   grid: {
-    width: '100vw'
+    padding: '3%',
+    width: '100vw',
+    flexGrow: 1
   }
 };
 
@@ -15,16 +17,24 @@ class FoodGrid extends React.Component {
   render() {
     const classes = this.props;
     const foodCards = classes.foodLists.map((food, index) => (
-      <FoodCard
-        key={index}
-        price={food.price}
-        imgURL={food.url}
-        Title={food.title}
-        Description={food.description}
-      />
+      <Grid key={index} item lg={2} md={3} xs={6}>
+        <FoodCard
+          key={index}
+          price={food.price}
+          imgURL={food.url}
+          Title={food.title}
+          Description={food.description}
+        />
+      </Grid>
     ));
     return (
-      <Grid style={styles.grid} container justify='center'>
+      <Grid
+        style={styles.grid}
+        container
+        justify='center'
+        alignItems='center'
+        spacing={16}
+      >
         {foodCards}
       </Grid>
     );

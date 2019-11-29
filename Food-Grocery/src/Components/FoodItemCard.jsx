@@ -19,12 +19,12 @@ import MySnackbarContent from './CustomSnackbar';
 const styles = {
   card: {
     position: 'relative',
-    width: '17%',
+    width: '85%',
     margin: '5px'
   },
   img: {
     width: '100%',
-    height: '325px'
+    height: '300px'
   },
   media: {
     width: '100%',

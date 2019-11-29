@@ -61,7 +61,7 @@ class FoodInformation extends React.Component {
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleClose} color='#1D8BF1'>
+            <Button onClick={this.handleClose} color='primary'>
               Close
             </Button>
           </DialogActions>
