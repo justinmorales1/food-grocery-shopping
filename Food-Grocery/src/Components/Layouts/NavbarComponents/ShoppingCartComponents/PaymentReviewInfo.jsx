@@ -9,7 +9,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 const styles = {
   foodImage: {
     height: 150,
-    width: 150,
+    width: 150
   },
   listContainer: {
     display: 'grid',
@@ -17,7 +17,7 @@ const styles = {
     gridTemplateColumns: '250px 250px 250px',
     justifyContent: 'center'
   }
-}
+};
 
 class PaymentReviewInfo extends React.Component {
   constructor(props) {
@@ -26,16 +26,24 @@ class PaymentReviewInfo extends React.Component {
       name: 'John Doe',
       email: 'jdoe@email.com',
       address: '1600 Pennsylvania Ave',
-      total : 0
+      total: 0,
+      couponDiscountsApplied: props.couponDiscountsApplied
     };
   }
 
   calculateTotalAmount = () => {
     let total = 0;
     let items = this.props.itemObjects;
+
     items.map((item, index) => {
-      total += parseFloat(item.price.slice(1, item.price.length)) * this.props.selectedNumberOfItemsPerGame[index];
-    })
+      total +=
+        parseFloat(item.price) * this.props.selectedNumberOfItemsPerGame[index];
+    });
+    this.state.couponDiscountsApplied.forEach(prod => {
+      if (prod.coupon) {
+        total -= parseInt(prod.coupon.priceOff);
+      }
+    });
     this.setState({ total: total.toFixed(2) });
   };
 
@@ -43,7 +51,11 @@ class PaymentReviewInfo extends React.Component {
     let currentUserHandler = this.props.state.currentUserHandler;
     if (currentUserHandler.isLoggedIn) {
       let user = currentUserHandler.user;
-      this.setState({ name: user.name, email: user.email, address: user.address });
+      this.setState({
+        name: user.name,
+        email: user.email,
+        address: user.address
+      });
     }
   };
 
@@ -51,49 +63,58 @@ class PaymentReviewInfo extends React.Component {
     this.calculateTotalAmount();
     this.setUserProps();
   };
-  
+
   render() {
     const itemObjects = this.props.itemObjects;
 
     return (
       <Paper elevation={2}>
-        <Typography style={{marginLeft: 15}} variant="body2" gutterBottom>
-          <span style={{ fontWeight: 'bold', marginRight: 98 }}>Email: </span> {this.state.email}
+        <Typography style={{ marginLeft: 15 }} variant='body2' gutterBottom>
+          <span style={{ fontWeight: 'bold', marginRight: 98 }}>Email: </span>{' '}
+          {this.state.email}
         </Typography>
-        <Typography style={{marginLeft: 15 }} variant="body2" gutterBottom>
-          <span style={{ fontWeight: 'bold', marginRight: 15 }}>Shipping Address:</span> {this.state.address}
+        <Typography style={{ marginLeft: 15 }} variant='body2' gutterBottom>
+          <span style={{ fontWeight: 'bold', marginRight: 15 }}>
+            Shipping Address:
+          </span>{' '}
+          {this.state.address}
         </Typography>
-        <Typography style={{marginLeft: 15 }} variant="body2" gutterBottom>
-          <span style={{ fontWeight: 'bold', marginRight: 24 }}>Payment Method:</span> Credit Card (Visa)
+        <Typography style={{ marginLeft: 15 }} variant='body2' gutterBottom>
+          <span style={{ fontWeight: 'bold', marginRight: 24 }}>
+            Payment Method:
+          </span>{' '}
+          Credit Card (Visa)
         </Typography>
-        <Typography style={{marginLeft: 15 }} variant="body2" gutterBottom>
+        <Typography style={{ marginLeft: 15 }} variant='body2' gutterBottom>
           <span style={{ fontWeight: 'bold' }}>Orders:</span>
         </Typography>
         <List>
           <div style={styles.listContainer}>
             {itemObjects.map((item, i) => {
-              return(
+              return (
                 <ListItem key={i}>
-                  <img style={styles.foodImage} src={item.url}/>
-                  <ListItemText 
+                  <img style={styles.foodImage} src={item.url} />
+                  <ListItemText
                     primary={item.title}
-                    secondary={`Price: ${item.price} x${this.props.selectedNumberOfItemsPerGame[i]}`} />
+                    secondary={`Price: ${item.price} x${this.props.selectedNumberOfItemsPerGame[i]}`}
+                  />
                 </ListItem>
-              )
+              );
             })}
           </div>
         </List>
-        <Typography style={{marginLeft: 15 }} variant="body2" gutterBottom>
-          <span style={{ fontWeight: 'bold', marginRight: 104 }}>Total:</span> {`$${this.state.total}`}
+        <Typography style={{ marginLeft: 15 }} variant='body2' gutterBottom>
+          <span style={{ fontWeight: 'bold', marginRight: 104 }}>Total:</span>{' '}
+          {`$${this.state.total}`}
         </Typography>
       </Paper>
     );
   }
 }
 
-const mapStateToProps = (currentPageState) => {
+const mapStateToProps = currentPageState => {
   return {
-    state: currentPageState,
+    state: currentPageState
   };
 };
 

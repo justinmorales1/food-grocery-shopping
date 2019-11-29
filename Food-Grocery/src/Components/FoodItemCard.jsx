@@ -73,12 +73,8 @@ class FoodCard extends React.Component {
   };
 
   handleClick = () => {
-    let itemObj = {
-      title: this.props.Title,
-      price: this.props.price,
-      url: this.props.imgURL
-    };
-    this.props.addItem(itemObj);
+    // Add the whole food object
+    this.props.addItem(this.props.food);
 
     if (this.isNewGameInCart(this.props.Title)) {
       this.setState({ open: true });

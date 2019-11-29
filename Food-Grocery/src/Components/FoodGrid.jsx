@@ -23,6 +23,7 @@ class FoodGrid extends React.Component {
           price={food.price}
           imgURL={food.url}
           Title={food.title}
+          food={food}
           Description={food.description}
         />
       </Grid>

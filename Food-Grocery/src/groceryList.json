@@ -13,7 +13,12 @@
     "description": "Pasturized milk from the cow, to us, to you.",
     "category": "dairy",
     "price": "3.21",
-    "url": "https://www.kroger.com/product/images/xlarge/front/0001111041700"
+    "url": "https://www.kroger.com/product/images/xlarge/front/0001111041700",
+    "coupon": {
+      "minQty": 1,
+      "priceOff": "1.00",
+      "code": "VLM09V664Q"
+    }
   },
   {
     "id": 3,
@@ -37,7 +42,12 @@
     "description": "1 pint, indulgent, custard-style ice cream. Made with fresh cream. Bourbon Vanilla.",
     "price": "1.68",
     "category": "dairy",
-    "url": "https://img.delicious.com.au/bNCwB5Ws/w1200/del/2015/10/vanilla-bean-ice-cream-11118-1.jpg"
+    "url": "https://img.delicious.com.au/bNCwB5Ws/w1200/del/2015/10/vanilla-bean-ice-cream-11118-1.jpg",
+    "coupon": {
+      "minQty": 1,
+      "priceOff": "2.00",
+      "code": "I5JBMALLCV"
+    }
   },
   {
     "id": 6,
@@ -277,7 +287,12 @@
     "description": "Fresh, small hass avocado. High unsaturated fat content.",
     "price": "0.70",
     "category": "produce",
-    "url": "https://d2ebzu6go672f3.cloudfront.net/media/content/images/p7_Avocado_HH1806_gi901359518.jpg"
+    "url": "https://d2ebzu6go672f3.cloudfront.net/media/content/images/p7_Avocado_HH1806_gi901359518.jpg",
+    "coupon": {
+      "minQty": 1,
+      "priceOff": "2.50",
+      "code": "GNFMKDFUY7"
+    }
   },
   {
     "id": 36,
@@ -381,7 +396,12 @@
     "description": "Lemon-lime, thirst quencher. Zero sugar, hydration with electrolytes.",
     "price": "1.00",
     "category": "drinks",
-    "url": "https://products2.imgix.drizly.com/ci-gatorade-lemon-lime-d2545063f46d4c08.png?auto=format%2Ccompress&fm=jpeg&q=20"
+    "url": "https://products2.imgix.drizly.com/ci-gatorade-lemon-lime-d2545063f46d4c08.png?auto=format%2Ccompress&fm=jpeg&q=20",
+    "coupon": {
+      "minQty": 1,
+      "priceOff": "1.5",
+      "code": "JEGFQ5UK8I"
+    }
   },
   {
     "id": 49,
