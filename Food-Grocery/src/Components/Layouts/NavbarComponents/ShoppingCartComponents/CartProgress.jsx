@@ -6,16 +6,17 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import GamesTable from './FoodTable';
+import FoodTable from './FoodTable';
 import UserPaymentInfo from './UserPaymentInfo';
 import PaymentReviewInfo from './PaymentReviewInfo';
 import { clearCart } from '../../../../Actions/ClearCart';
-import { updateLoggedInUser } from '../../../../Actions/LoggedInUserAction'
+import { updateLoggedInUser } from '../../../../Actions/LoggedInUserAction';
 import { currentUserHandler } from '../../../../Reducers/LoggedInUserReducer';
+import { LinearProgress } from '@material-ui/core';
 
 const styles = {
   root: {
-    width: '100%'    
+    width: '100%'
   },
   button: {
     float: 'right',
@@ -29,7 +30,11 @@ const styles = {
 };
 
 let getSteps = () => {
-  return ['Preview order', 'Confirm shipping and payment settings', 'Review settings'];
+  return [
+    'Preview order',
+    'Confirm shipping and payment settings',
+    'Review settings'
+  ];
 };
 
 class CartProgress extends React.Component {
@@ -39,12 +44,15 @@ class CartProgress extends React.Component {
       activeStep: 0,
       email: 'jdoe@email.com',
       showProgress: true,
-      selectedNumberOfItemsPerGame: []
+      selectedNumberOfItemsPerGame: [],
+      couponDiscountsApplied: [],
+      time: '06:00 PM',
+      date: '2019-12-12'
     };
   }
 
   componentWillMount = () => {
-    this.createEmptyNumberOfGamesArr();
+    this.createEmptyNumberOfGroceriesArr();
     this.setLoggedInUserData();
   };
 
@@ -62,7 +70,7 @@ class CartProgress extends React.Component {
       activeStep: activeStep + 1
     });
 
-    if (activeStep == getSteps().length -1) {
+    if (activeStep == getSteps().length - 1) {
       setTimeout(() => {
         this.setState({ showProgress: false });
       }, 2000);
@@ -72,13 +80,13 @@ class CartProgress extends React.Component {
   handleBack = () => {
     const { activeStep } = this.state;
     this.setState({
-      activeStep: activeStep - 1,
+      activeStep: activeStep - 1
     });
   };
 
   handleReset = () => {
     this.setState({
-      activeStep: 0,
+      activeStep: 0
     });
     this.handleSaveOrdersToUser();
     this.props.clearCart();
@@ -97,7 +105,7 @@ class CartProgress extends React.Component {
     }
   };
 
-  createEmptyNumberOfGamesArr = () => {
+  createEmptyNumberOfGroceriesArr = () => {
     let arr = [];
     for (let i = 0; i < this.props.itemObjects.length; i++) {
       arr.push(1);
@@ -109,6 +117,24 @@ class CartProgress extends React.Component {
     let arr = this.state.selectedNumberOfItemsPerGame;
     arr[itemIndex] = value;
     this.setState({ selectedNumberOfItemsPerGame: arr });
+  };
+
+  addCouponDiscountsApplied = prod => {
+    let arr = this.state.couponDiscountsApplied;
+    arr.push(prod);
+    this.setState({ couponDiscountsApplied: arr });
+  };
+
+  handleTimeChange = time => {
+    const t = new Date(time);
+
+    // Store hour:minute:seconds
+    this.setState({ time: t.toLocaleTimeString('en-US') });
+  };
+
+  handleDateChange = date => {
+    console.log(date);
+    this.setState({ date: date });
   };
 
   render() {
@@ -132,15 +158,42 @@ class CartProgress extends React.Component {
         <div>
           {activeStep === steps.length ? (
             <div>
-              <Typography style={styles.instructions}>
-                {this.state.showProgress ? 
-                  <CircularProgress style={styles.progress} size={50} /> :
+              <Typography component={'div'} style={styles.instructions}>
+                {this.state.showProgress ? (
+                  <CircularProgress style={styles.progress} size={50} />
+                ) : (
                   <div>
-                    Thanks for shopping with us, we will email to 
-                    <span style={{fontWeight: 'bold'}}> {this.state.email} </span>
-                    which should contain the tracking number once we ship your order.
+                    Thanks for shopping with us, we will email to
+                    <span style={{ fontWeight: 'bold' }}>
+                      {' '}
+                      {this.state.email}{' '}
+                    </span>
+                    which should contain the tracking number once we ship your
+                    order.
+                    <div style={{ marginTop: 10, marginBottom: 10 }}>
+                      <span style={{ fontWeight: 'bold' }}>
+                        Delivery Date:{' '}
+                      </span>
+                      {this.state.date}
+                    </div>
+                    <div style={{ marginTop: 10, marginBottom: 10 }}>
+                      <span style={{ fontWeight: 'bold' }}>
+                        Delivery Time:{' '}
+                      </span>
+                      {this.state.time}
+                    </div>
+                    <div style={{ marginTop: 10, marginBottom: 10 }}>
+                      <span style={{ fontWeight: 'bold' }}>
+                        {' '}
+                        Order Status:{' '}
+                      </span>
+                      Received
+                    </div>
+                    <div style={{ marginTop: 10 }}>
+                      <LinearProgress variant='determinate' value={20} />
+                    </div>
                   </div>
-                }
+                )}
               </Typography>
               <Button onClick={this.handleReset} style={styles.button}>
                 Done
@@ -148,26 +201,37 @@ class CartProgress extends React.Component {
             </div>
           ) : (
             <div>
-              {this.state.activeStep == 0 && 
-                <GamesTable 
-                  itemObjects={itemObjects} 
-                  selectedNumberOfItemsPerGame={this.state.selectedNumberOfItemsPerGame}
-                  updateNumberOfItemsForGame={this.updateNumberOfItemsForGame}
-                />
-              }
-              {this.state.activeStep == 1 && 
-                <UserPaymentInfo />
-              }
-              {this.state.activeStep == 2 && 
-                <PaymentReviewInfo 
+              {this.state.activeStep == 0 && (
+                <div>
+                  <FoodTable
+                    itemObjects={itemObjects}
+                    selectedNumberOfItemsPerGame={
+                      this.state.selectedNumberOfItemsPerGame
+                    }
+                    couponDiscountsApplied={this.state.couponDiscountsApplied}
+                    updateNumberOfItemsForGame={this.updateNumberOfItemsForGame}
+                    addCouponDiscountsApplied={this.addCouponDiscountsApplied}
+                  />
+                </div>
+              )}
+
+              {this.state.activeStep == 1 && <UserPaymentInfo />}
+
+              {this.state.activeStep == 2 && (
+                <PaymentReviewInfo
                   itemObjects={itemObjects}
-                  selectedNumberOfItemsPerGame={this.state.selectedNumberOfItemsPerGame}
+                  couponDiscountsApplied={this.state.couponDiscountsApplied}
+                  selectedNumberOfItemsPerGame={
+                    this.state.selectedNumberOfItemsPerGame
+                  }
+                  handleTimeChange={this.handleTimeChange}
+                  handleDateChange={this.handleDateChange}
                 />
-              }
+              )}
               <div style={{ marginTop: 30 }}>
                 <Button
-                  variant="contained"
-                  color="primary"
+                  variant='contained'
+                  color='primary'
                   onClick={this.handleNext}
                   style={styles.button}
                 >
@@ -189,17 +253,17 @@ class CartProgress extends React.Component {
   }
 }
 
-const mapStateToProps = (currentPageState) => {
+const mapStateToProps = currentPageState => {
   return {
-    state: currentPageState,
+    state: currentPageState
   };
 };
 
-let mapDispatchToProps = (dispatch) => {
+let mapDispatchToProps = dispatch => {
   return {
     clearCart: () => dispatch(clearCart()),
-    updateLoggedInUser: (user) => dispatch(updateLoggedInUser(user))
-  }
+    updateLoggedInUser: user => dispatch(updateLoggedInUser(user))
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartProgress);

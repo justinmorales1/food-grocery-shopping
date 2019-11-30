@@ -11,6 +11,7 @@ import { AppBar, Toolbar, Typography, Snackbar } from '@material-ui/core';
 import { updateLoggedInUserStatus } from '../../Actions/LoggedInStatusAction';
 import { updateLoggedInUser } from '../../Actions/LoggedInUserAction';
 import MySnackbarContent from '../CustomSnackbar';
+import Coupons from './NavbarComponents/Coupons';
 
 const styles = {
   root: {
@@ -47,18 +48,18 @@ class Navbar extends Component {
   handleSnackbarClose = () => {
     this.setState({ openSnackbarMessage: false });
   };
-  
+
   handleLoginStatusChange = (isLoggedIn, message) => {
     this.setState({ userIsLoggedIn: isLoggedIn });
     this.props.updateLoggedInUserStatus(isLoggedIn);
     this.handleLoginLogoutPopUpMessage(message);
   };
 
-  handleLoginLogoutPopUpMessage = (message) => {
+  handleLoginLogoutPopUpMessage = message => {
     this.setState({ openSnackbarMessage: true, loginMessage: message });
   };
 
-  handleUpdateCurrentUserObj = (userObj) => {
+  handleUpdateCurrentUserObj = userObj => {
     this.setState({ user: userObj });
     this.props.updateLoggedInUser(userObj);
   };
@@ -66,56 +67,65 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <AppBar position="static" style={styles.root}>
+        <AppBar position='static' style={styles.root}>
           <Toolbar>
-            <Typography variant="title" color="inherit" style={styles.title}>
+            <Typography variant='title' color='inherit' style={styles.title}>
               Whole Food Eats
-            </Typography>          
+            </Typography>
             <SearchBar />
-            <ShoppingCart styles={styles}/>
+            <ShoppingCart styles={styles} />
             {!this.state.userIsLoggedIn ? (
               <Fragment>
-                <Login styles={styles}
-                  onLoginStatusChange={this.handleLoginStatusChange} encryptionKey={this.state.encryptionKey}
+                <Login
+                  styles={styles}
+                  onLoginStatusChange={this.handleLoginStatusChange}
+                  encryptionKey={this.state.encryptionKey}
                   updateUserObject={this.handleUpdateCurrentUserObj}
                 />
-                <Register styles={styles}
-                  onLoginStatusChange={this.handleLoginStatusChange} encryptionKey={this.state.encryptionKey}
+                <Register
+                  styles={styles}
+                  onLoginStatusChange={this.handleLoginStatusChange}
+                  encryptionKey={this.state.encryptionKey}
                   updateUserObject={this.handleUpdateCurrentUserObj}
                 />
               </Fragment>
             ) : (
               <Fragment>
-                <UserAccount styles={styles} userObj={this.state.user} 
+                <UserAccount
+                  styles={styles}
+                  userObj={this.state.user}
                   onLoginStatusChange={this.handleLoginStatusChange}
                 />
-                <Logout styles={styles}
+                <Logout
+                  styles={styles}
                   onLoginStatusChange={this.handleLoginStatusChange}
                 />
               </Fragment>
             )}
-             <Fragment>
-              <FAQ styles={styles}/>
-              </Fragment>
+            <Fragment>
+              <Coupons styles={styles} />
+            </Fragment>
+            <Fragment>
+              <FAQ styles={styles} />
+            </Fragment>
           </Toolbar>
           <Snackbar
             open={this.state.openSnackbarMessage}
             anchorOrigin={{
               vertical: 'top',
-              horizontal: 'center',
+              horizontal: 'center'
             }}
             ContentProps={{
-              'aria-describedby': 'message-id',
+              'aria-describedby': 'message-id'
             }}
             autoHideDuration={3000}
             onClose={this.handleSnackbarClose}
           >
             <MySnackbarContent
-              variant="success"
-              message={<span id="message-id">{this.state.loginMessage}</span>}
+              variant='success'
+              message={<span id='message-id'>{this.state.loginMessage}</span>}
             />
           </Snackbar>
-            
         </AppBar>
       </div>
     );
@@ -124,9 +134,10 @@ class Navbar extends Component {
 
 function mapDispatchToProps(dispatch) {
   return {
-    updateLoggedInUserStatus: (isLoggedIn) => dispatch(updateLoggedInUserStatus(isLoggedIn)),
-    updateLoggedInUser: (user) => dispatch(updateLoggedInUser(user))
-  }
+    updateLoggedInUserStatus: isLoggedIn =>
+      dispatch(updateLoggedInUserStatus(isLoggedIn)),
+    updateLoggedInUser: user => dispatch(updateLoggedInUser(user))
+  };
 }
 
 export default connect(null, mapDispatchToProps)(Navbar);

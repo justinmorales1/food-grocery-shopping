@@ -1,11 +1,11 @@
 import React from 'react';
-import { 
-  Button, 
-  TextField, 
-  Dialog, 
-  DialogActions, 
-  DialogContent, 
-  DialogContentText, 
+import {
+  Button,
+  TextField,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
   DialogTitle,
   InputLabel,
   Select,
@@ -24,7 +24,7 @@ class Register extends React.Component {
       open: false,
       name: '',
       address: '',
-      addressErr: '',
+      addressErr: false,
       nameErr: false,
       email: '',
       emailErr: false,
@@ -100,7 +100,7 @@ class Register extends React.Component {
 
   thereAreEmptyValuesInForm = () => {
     let hasEmptyValues = false;
-    let valuesToCheck = ['name','address', 'email', 'password', 'passwordConfirm'];
+    let valuesToCheck = ['name', 'address', 'email', 'password', 'passwordConfirm'];
     for (let i = 0; i < valuesToCheck.length; i++) {
       let propValue = valuesToCheck[i];
       let errorName = propValue + 'Err';
@@ -147,7 +147,7 @@ class Register extends React.Component {
 
   handleSavingUser = () => {
     let hashedPassword = this.encryptPassword(this.state.password);
-    let user = { name: this.state.name, address: this.state.address, email: this.state.email, password: hashedPassword};
+    let user = { name: this.state.name, address: this.state.address, email: this.state.email, password: hashedPassword };
     this.props.updateUserObject(user);
   };
 
@@ -164,7 +164,7 @@ class Register extends React.Component {
     }
   };
 
-  render() {
+  render () {
     let styles = this.props.styles;
     return (
       <div onKeyPress={this.handleKeyPress}>
@@ -179,20 +179,20 @@ class Register extends React.Component {
             <DialogContentText>
               Please fill out all the fields of the form to complete the registration
             </DialogContentText>
-            <TextField value={this.state.name} onChange={this.handleFullNameChange} error={this.state.nameErr} 
+            <TextField value={this.state.name} onChange={this.handleFullNameChange} error={this.state.nameErr}
               autoFocus margin="dense" id="full-name" label="Full Name" type="text" required fullWidth
             />
-            <TextField value={this.state.address} onChange={this.handleAddressChange} error={this.state.addressErr} 
+            <TextField value={this.state.address} onChange={this.handleAddressChange} error={this.state.addressErr}
               margin="dense" id="full-address" label="Address" type="text" required fullWidth
             />
-            <TextField value={this.state.email} onChange={this.handleEmailChange} 
+            <TextField value={this.state.email} onChange={this.handleEmailChange}
               error={this.state.emailErr} helperText={this.state.emailHelperText}
               margin="dense" id="email-register" label="Email" type="email" required fullWidth
             />
             <TextField value={this.state.password} onChange={this.handlePasswordChange} error={this.state.passwordErr}
               margin="dense" id="password-register" label="Password" type="password" required fullWidth
             />
-            <TextField style={{marginBottom: 20}} value={this.state.passwordConfirm} onChange={this.handlePasswordConfirmChange} 
+            <TextField style={{ marginBottom: 20 }} value={this.state.passwordConfirm} onChange={this.handlePasswordConfirmChange}
               error={this.state.passwordConfirmErr} helperText={this.state.passwordHelperText}
               margin="dense" id="password-confirm" label="Confirm Password" type="password" required fullWidth
             />

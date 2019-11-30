@@ -16,8 +16,10 @@ const styles = {
     margin: 2
   },
   media: {
-    height: '180px',
-    paddingTop: '56.25%', // 16:9
+    height: 150,
+    width: 150,
+    position: 'relative',
+    left: '20%'
   },
   foodStyles: {
     textDecoration: 'underline',
@@ -43,16 +45,18 @@ class OrderCard extends React.Component {
     super(props);
   }
 
-  render () {
+  render() {
     return (
       <div>
         <Card style={styles.card}>
-          <CardMedia
-            style={styles.media}
-            image={this.props.imgURL}
-          />
+          <CardMedia style={styles.media} image={this.props.imgURL} />
           <CardContent>
-            <Typography gutterBottom variant="headline" component="h4" style={styles.foodStyles}>
+            <Typography
+              gutterBottom
+              variant='headline'
+              component='h4'
+              style={styles.foodStyles}
+            >
               {this.props.foodTitle}
             </Typography>
             <div style={styles.foodOrderPlaced}>
@@ -66,13 +70,21 @@ class OrderCard extends React.Component {
             </div>
           </CardContent>
           <CardActions>
-            <Button size="small" color="primary" variant="contained" style={styles.button}>
+            <Button
+              size='small'
+              color='primary'
+              variant='contained'
+              style={styles.button}
+            >
               Buy it again
             </Button>
-            <Button size="small" color="primary" style={styles.button}>
+            <Button size='small' color='primary' style={styles.button}>
               Track package
             </Button>
-            <OrderCardMenu fontSize={styles.button.fontSize} style={styles.button}/>
+            <OrderCardMenu
+              fontSize={styles.button.fontSize}
+              style={styles.button}
+            />
           </CardActions>
         </Card>
       </div>
