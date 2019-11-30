@@ -88,7 +88,7 @@ class FoodTable extends React.Component {
 
     this.state.couponDiscountsApplied.forEach(prod => {
       if (prod.coupon.applied) {
-        totalPriceWithDiscounts -= parseInt(prod.coupon.priceOff);
+        totalPriceWithDiscounts -= parseFloat(prod.coupon.priceOff);
       }
     });
 

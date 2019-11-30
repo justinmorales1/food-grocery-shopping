@@ -5,6 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import TimeInput from 'material-ui-time-picker';
+import TextField from '@material-ui/core/TextField';
 
 const styles = {
   foodImage: {
@@ -41,7 +43,7 @@ class PaymentReviewInfo extends React.Component {
     });
     this.state.couponDiscountsApplied.forEach(prod => {
       if (prod.coupon) {
-        total -= parseInt(prod.coupon.priceOff);
+        total -= parseFloat(prod.coupon.priceOff);
       }
     });
     this.setState({ total: total.toFixed(2) });
@@ -68,7 +70,7 @@ class PaymentReviewInfo extends React.Component {
     const itemObjects = this.props.itemObjects;
 
     return (
-      <Paper elevation={2}>
+      <Paper elevation={2} style={{ padding: 10 }}>
         <Typography style={{ marginLeft: 15 }} variant='body2' gutterBottom>
           <span style={{ fontWeight: 'bold', marginRight: 98 }}>Email: </span>{' '}
           {this.state.email}
@@ -85,6 +87,28 @@ class PaymentReviewInfo extends React.Component {
           </span>{' '}
           Credit Card (Visa)
         </Typography>
+
+        <Typography style={{ marginLeft: 15 }} variant='body2' gutterBottom>
+          <span style={{ fontWeight: 'bold', marginRight: 50 }}>
+            Delivery Date:
+          </span>{' '}
+          <TextField
+            id='date'
+            type='date'
+            defaultValue='2019-12-12'
+            onChange={e => this.props.handleDateChange(e.target.value)}
+          />
+        </Typography>
+        <Typography style={{ marginLeft: 15 }} variant='body2' gutterBottom>
+          <span style={{ fontWeight: 'bold', marginRight: 50 }}>
+            Delivery Time:
+          </span>{' '}
+          <TimeInput
+            mode='12h'
+            onChange={time => this.props.handleTimeChange(time)}
+          />
+        </Typography>
+
         <Typography style={{ marginLeft: 15 }} variant='body2' gutterBottom>
           <span style={{ fontWeight: 'bold' }}>Orders:</span>
         </Typography>

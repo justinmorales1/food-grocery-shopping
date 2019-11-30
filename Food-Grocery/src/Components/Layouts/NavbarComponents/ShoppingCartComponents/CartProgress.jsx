@@ -12,6 +12,7 @@ import PaymentReviewInfo from './PaymentReviewInfo';
 import { clearCart } from '../../../../Actions/ClearCart';
 import { updateLoggedInUser } from '../../../../Actions/LoggedInUserAction';
 import { currentUserHandler } from '../../../../Reducers/LoggedInUserReducer';
+import { LinearProgress } from '@material-ui/core';
 
 const styles = {
   root: {
@@ -44,7 +45,9 @@ class CartProgress extends React.Component {
       email: 'jdoe@email.com',
       showProgress: true,
       selectedNumberOfItemsPerGame: [],
-      couponDiscountsApplied: []
+      couponDiscountsApplied: [],
+      time: '06:00 PM',
+      date: '2019-12-12'
     };
   }
 
@@ -122,6 +125,18 @@ class CartProgress extends React.Component {
     this.setState({ couponDiscountsApplied: arr });
   };
 
+  handleTimeChange = time => {
+    const t = new Date(time);
+
+    // Store hour:minute:seconds
+    this.setState({ time: t.toLocaleTimeString('en-US') });
+  };
+
+  handleDateChange = date => {
+    console.log(date);
+    this.setState({ date: date });
+  };
+
   render() {
     const steps = getSteps();
     const { activeStep } = this.state;
@@ -143,7 +158,7 @@ class CartProgress extends React.Component {
         <div>
           {activeStep === steps.length ? (
             <div>
-              <Typography style={styles.instructions}>
+              <Typography component={'div'} style={styles.instructions}>
                 {this.state.showProgress ? (
                   <CircularProgress style={styles.progress} size={50} />
                 ) : (
@@ -155,6 +170,28 @@ class CartProgress extends React.Component {
                     </span>
                     which should contain the tracking number once we ship your
                     order.
+                    <div style={{ marginTop: 10, marginBottom: 10 }}>
+                      <span style={{ fontWeight: 'bold' }}>
+                        Delivery Date:{' '}
+                      </span>
+                      {this.state.date}
+                    </div>
+                    <div style={{ marginTop: 10, marginBottom: 10 }}>
+                      <span style={{ fontWeight: 'bold' }}>
+                        Delivery Time:{' '}
+                      </span>
+                      {this.state.time}
+                    </div>
+                    <div style={{ marginTop: 10, marginBottom: 10 }}>
+                      <span style={{ fontWeight: 'bold' }}>
+                        {' '}
+                        Order Status:{' '}
+                      </span>
+                      Received
+                    </div>
+                    <div style={{ marginTop: 10 }}>
+                      <LinearProgress variant='determinate' value={20} />
+                    </div>
                   </div>
                 )}
               </Typography>
@@ -187,6 +224,8 @@ class CartProgress extends React.Component {
                   selectedNumberOfItemsPerGame={
                     this.state.selectedNumberOfItemsPerGame
                   }
+                  handleTimeChange={this.handleTimeChange}
+                  handleDateChange={this.handleDateChange}
                 />
               )}
               <div style={{ marginTop: 30 }}>
