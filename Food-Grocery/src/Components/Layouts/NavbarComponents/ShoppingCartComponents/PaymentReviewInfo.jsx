@@ -95,7 +95,6 @@ class PaymentReviewInfo extends React.Component {
           <TextField
             id='date'
             type='date'
-            defaultValue='2019-12-12'
             onChange={e => this.props.handleDateChange(e.target.value)}
           />
         </Typography>

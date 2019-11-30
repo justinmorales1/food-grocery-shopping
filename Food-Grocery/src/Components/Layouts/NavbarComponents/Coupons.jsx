@@ -40,13 +40,21 @@ class Coupons extends React.Component {
     const discountCard = grocery => {
       return (
         <Card style={{ maxWidth: 550 }}>
-          <CardMedia style={{ height: 250, width: 250 }} image={grocery.url} />
+          <CardMedia
+            style={{
+              height: 150,
+              width: 150,
+              position: 'relative',
+              left: '20%'
+            }}
+            image={grocery.url}
+          />
           <CardContent>
             <Typography align='center'>
               <span
                 style={{ marginRight: 10, fontWeight: 'bold', fontSize: 14 }}
               >
-                Title:
+                Product:
               </span>
               {grocery.title}
             </Typography>
