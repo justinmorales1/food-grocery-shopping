@@ -24,7 +24,7 @@ const styles = {
   },
   img: {
     width: '100%',
-    height: '300px'
+    height: 'auto'
   },
   media: {
     width: '100%',
