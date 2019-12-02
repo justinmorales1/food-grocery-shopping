@@ -60,10 +60,10 @@ const styles = {
 class FoodCard extends React.Component {
   state = {
     open: false,
-    gamesTitlesArray: []
+    grocerysTitlesArray: []
   };
 
-  isNewGameInCart = title => {
+  isNewGroceryInCart = title => {
     for (let i = 0; i < this.props.state.addToCartReducer.items.length; i++) {
       if (this.props.state.addToCartReducer.items[i].title === title) {
         return false;
@@ -76,7 +76,7 @@ class FoodCard extends React.Component {
     // Add the whole food object
     this.props.addItem(this.props.food);
 
-    if (this.isNewGameInCart(this.props.Title)) {
+    if (this.isNewGroceryInCart(this.props.Title)) {
       this.setState({ open: true });
     }
   };
@@ -170,7 +170,7 @@ class FoodCard extends React.Component {
           <MySnackbarContent
             onClose={this.handleClose}
             variant='success'
-            message='Game was successfully added to cart!'
+            message='Grocery was successfully added to cart!'
           />
         </Snackbar>
       </React.Fragment>
