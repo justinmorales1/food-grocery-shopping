@@ -50,7 +50,7 @@ class FoodTable extends React.Component {
     super(props);
     this.state = {
       itemObjects: props.itemObjects,
-      selectedNumberOfItemsPerGame: props.selectedNumberOfItemsPerGame,
+      selectedNumberOfItemsPerGrocery: props.selectedNumberOfItemsPerGrocery,
       productsWithCoupons: groceryList.filter(grocery => grocery.coupon),
       couponDiscountsApplied: props.couponDiscountsApplied,
       couponHasError: false,
@@ -60,14 +60,15 @@ class FoodTable extends React.Component {
   }
 
   handleSelectChange = (itemIndex, e) => {
-    this.props.updateNumberOfItemsForGame(itemIndex, e.target.value);
+    this.props.updateNumberOfItemsForGrocery(itemIndex, e.target.value);
     this.updateDiscountPrices();
     this.forceUpdate();
   };
 
   getPriceBasedOnTotalItems = (price, itemIndex) => {
     const priceFloat = parseFloat(price);
-    let total = priceFloat * this.state.selectedNumberOfItemsPerGame[itemIndex];
+    let total =
+      priceFloat * this.state.selectedNumberOfItemsPerGrocery[itemIndex];
     return '$' + total.toFixed(2);
   };
 
@@ -76,9 +77,9 @@ class FoodTable extends React.Component {
     for (let i = 0; i < this.state.itemObjects.length; i++) {
       const price = this.state.itemObjects[i].price;
       const priceFloat = parseFloat(price);
-      let totalForGame =
-        priceFloat * this.state.selectedNumberOfItemsPerGame[i];
-      totalPrice += totalForGame;
+      let totalForGrocery =
+        priceFloat * this.state.selectedNumberOfItemsPerGrocery[i];
+      totalPrice += totalForGrocery;
     }
     return totalPrice;
   };
@@ -153,7 +154,7 @@ class FoodTable extends React.Component {
         prod.coupon.applied = false;
         if (
           parseInt(prod.coupon.minQty) <=
-          this.state.selectedNumberOfItemsPerGame[index]
+          this.state.selectedNumberOfItemsPerGrocery[index]
         ) {
           prod.coupon.applied = true;
         }
@@ -175,8 +176,8 @@ class FoodTable extends React.Component {
     });
   };
 
-  handleRemoveGameFromCard = gameIndex => {
-    this.props.removeItem(gameIndex);
+  handleRemoveGroceryFromCard = groceryIndex => {
+    this.props.removeItem(groceryIndex);
   };
 
   render() {
@@ -199,7 +200,7 @@ class FoodTable extends React.Component {
                     <TableCell>
                       <div
                         style={styles.deleteButton}
-                        onClick={() => this.handleRemoveGameFromCard(i)}
+                        onClick={() => this.handleRemoveGroceryFromCard(i)}
                       >
                         <RemoveCircle />
                       </div>
@@ -208,7 +209,7 @@ class FoodTable extends React.Component {
                     <TableCell numeric>{item.price}</TableCell>
                     <TableCell numeric>
                       <Select
-                        value={this.state.selectedNumberOfItemsPerGame[i]}
+                        value={this.state.selectedNumberOfItemsPerGrocery[i]}
                         onChange={e => this.handleSelectChange(i, e)}
                       >
                         <MenuItem value={1}>1</MenuItem>

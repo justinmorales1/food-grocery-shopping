@@ -39,7 +39,7 @@ class PaymentReviewInfo extends React.Component {
 
     items.map((item, index) => {
       total +=
-        parseFloat(item.price) * this.props.selectedNumberOfItemsPerGame[index];
+        parseFloat(item.price) * this.props.selectedNumberOfItemsPerGrocery[index];
     });
     this.state.couponDiscountsApplied.forEach(prod => {
       if (prod.coupon) {
@@ -119,7 +119,7 @@ class PaymentReviewInfo extends React.Component {
                   <img style={styles.foodImage} src={item.url} />
                   <ListItemText
                     primary={item.title}
-                    secondary={`Price: ${item.price} x${this.props.selectedNumberOfItemsPerGame[i]}`}
+                    secondary={`Price: ${item.price} x${this.props.selectedNumberOfItemsPerGrocery[i]}`}
                   />
                 </ListItem>
               );

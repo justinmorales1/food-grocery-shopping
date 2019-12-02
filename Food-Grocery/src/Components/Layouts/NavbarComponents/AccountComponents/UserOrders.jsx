@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Select, MenuItem } from '@material-ui/core';
 import OrderCard from './OrderComponents/OrderCard';
 
-
 const styles = {
   ordersFilter: {
     marginBottom: 10
@@ -14,7 +13,7 @@ const styles = {
     gridTemplateColumns: '250px 250px',
     justifyContent: 'center'
   }
-}
+};
 
 class UserSettings extends React.Component {
   constructor(props) {
@@ -29,18 +28,21 @@ class UserSettings extends React.Component {
     this.props.onTabClick(this.state.tabValue);
   };
 
-  handleChangeFilterOrdersBy = (e) => {
+  handleChangeFilterOrdersBy = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
-  
+
   render() {
     let orders = this.props.state.currentUserHandler.user.userOrders;
     return (
       <Fragment>
-        { (orders) ?
+        {orders ? (
           <Fragment>
             <div style={styles.ordersFilter}>
-              <span style={{fontWeight: 'bold' }}> {orders.length + ' orders'} </span>
+              <span style={{ fontWeight: 'bold' }}>
+                {' '}
+                {orders.length + ' orders'}{' '}
+              </span>
               <span>
                 placed in
                 <Select
@@ -61,26 +63,29 @@ class UserSettings extends React.Component {
             </div>
             <div style={styles.orderCardsContainer}>
               {orders.map((order, i) => {
-                return <OrderCard 
-                  key={i}
-                  imgURL={order.url}
-                  gameTitle={order.title}
-                  price={order.price}
-                  orderPlacedOn={'August 14th 2018'}
-                />
+                return (
+                  <OrderCard
+                    key={i}
+                    imgURL={order.url}
+                    groceryTitle={order.title}
+                    price={order.price}
+                    orderPlacedOn={'August 14th 2018'}
+                  />
+                );
               })}
             </div>
           </Fragment>
-          : <div>Empty Orders</div>
-        }
+        ) : (
+          <div>Empty Orders</div>
+        )}
       </Fragment>
-    )
+    );
   }
 }
 
-const mapStateToProps = (currentPageState) => {
+const mapStateToProps = currentPageState => {
   return {
-    state: currentPageState,
+    state: currentPageState
   };
 };
 

@@ -44,7 +44,7 @@ class CartProgress extends React.Component {
       activeStep: 0,
       email: 'jdoe@email.com',
       showProgress: true,
-      selectedNumberOfItemsPerGame: [],
+      selectedNumberOfItemsPerGrocery: [],
       couponDiscountsApplied: [],
       time: '06:00 PM',
       date: '2019-12-12'
@@ -110,13 +110,13 @@ class CartProgress extends React.Component {
     for (let i = 0; i < this.props.itemObjects.length; i++) {
       arr.push(1);
     }
-    this.setState({ selectedNumberOfItemsPerGame: arr });
+    this.setState({ selectedNumberOfItemsPerGrocery: arr });
   };
 
-  updateNumberOfItemsForGame = (itemIndex, value) => {
-    let arr = this.state.selectedNumberOfItemsPerGame;
+  updateNumberOfItemsForGrocery = (itemIndex, value) => {
+    let arr = this.state.selectedNumberOfItemsPerGrocery;
     arr[itemIndex] = value;
-    this.setState({ selectedNumberOfItemsPerGame: arr });
+    this.setState({ selectedNumberOfItemsPerGrocery: arr });
   };
 
   addCouponDiscountsApplied = prod => {
@@ -205,11 +205,13 @@ class CartProgress extends React.Component {
                 <div>
                   <FoodTable
                     itemObjects={itemObjects}
-                    selectedNumberOfItemsPerGame={
-                      this.state.selectedNumberOfItemsPerGame
+                    selectedNumberOfItemsPerGrocery={
+                      this.state.selectedNumberOfItemsPerGrocery
                     }
                     couponDiscountsApplied={this.state.couponDiscountsApplied}
-                    updateNumberOfItemsForGame={this.updateNumberOfItemsForGame}
+                    updateNumberOfItemsForGrocery={
+                      this.updateNumberOfItemsForGrocery
+                    }
                     addCouponDiscountsApplied={this.addCouponDiscountsApplied}
                   />
                 </div>
@@ -221,8 +223,8 @@ class CartProgress extends React.Component {
                 <PaymentReviewInfo
                   itemObjects={itemObjects}
                   couponDiscountsApplied={this.state.couponDiscountsApplied}
-                  selectedNumberOfItemsPerGame={
-                    this.state.selectedNumberOfItemsPerGame
+                  selectedNumberOfItemsPerGrocery={
+                    this.state.selectedNumberOfItemsPerGrocery
                   }
                   handleTimeChange={this.handleTimeChange}
                   handleDateChange={this.handleDateChange}
