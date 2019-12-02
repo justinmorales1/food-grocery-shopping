@@ -59,8 +59,7 @@ const styles = {
 
 class FoodCard extends React.Component {
   state = {
-    open: false,
-    grocerysTitlesArray: []
+    open: false
   };
 
   isNewGroceryInCart = title => {
